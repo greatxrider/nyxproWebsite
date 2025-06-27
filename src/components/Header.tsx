@@ -3,21 +3,13 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X, Facebook, Linkedin, User, LogOut } from "lucide-react";
-import { useAuth } from "./AuthProvider";
-import AuthModal from "./AuthModal";
+import { Menu, X, Facebook, Linkedin } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
-  const { user, signOut, loading } = useAuth();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-  };
-
-  const handleSignOut = async () => {
-    await signOut();
   };
 
   return (
@@ -30,7 +22,7 @@ const Header = () => {
               <div className="relative">
                 <Image
                   src="/images/nyxproLogo.jpg"
-                  alt="Nyxpro AI Agency Logo"
+                  alt="Nyxpro IT Consulting and Services Logo"
                   width={45}
                   height={45}
                   className="rounded-xl shadow-lg ai-glow"
@@ -38,10 +30,12 @@ const Header = () => {
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-primary-300/20 to-electric-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div>
-                <span className="text-2xl font-bold gradient-text font-logo">
+                <span className="text-2xl font-bold text-white font-logo">
                   Nyxpro
                 </span>
-                <div className="text-xs text-gray-400 font-logo">AI Agency</div>
+                <div className="text-xs text-primary-300/80 font-logo">
+                  IT Consulting and Services
+                </div>
               </div>
             </Link>
           </div>
@@ -59,7 +53,7 @@ const Header = () => {
               href="#services"
               className="text-gray-300 hover:text-primary-300 transition-all duration-300 font-medium relative group font-logo"
             >
-              AI Services
+              Services
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-300 to-electric-400 group-hover:w-full transition-all duration-300"></span>
             </Link>
             <Link
@@ -85,54 +79,28 @@ const Header = () => {
             </Link>
           </nav>
 
-          {/* Social Media Icons & CTA */}
+          {/* Enhanced Social Media Icons */}
           <div className="hidden md:flex items-center space-x-4">
-            <div className="flex items-center space-x-3 pr-4 border-r border-gray-700">
+            <div className="flex items-center space-x-3">
               <a
                 href="https://www.facebook.com/nyxpro2022"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 text-gray-400 hover:text-primary-300 bg-gray-800/50 hover:bg-primary-300/20 rounded-lg transition-all duration-300 ai-glow"
-                aria-label="Follow Nyxpro AI on Facebook"
+                className="p-3 bg-[#1877F2]/20 hover:bg-[#1877F2]/30 border border-[#1877F2]/40 hover:border-[#1877F2]/60 rounded-xl transition-all duration-300 ai-glow group shadow-lg shadow-[#1877F2]/10"
+                aria-label="Follow Nyxpro on Facebook"
               >
-                <Facebook size={18} />
+                <Facebook className="w-5 h-5 text-[#1877F2] group-hover:text-white transition-colors duration-300" />
               </a>
               <a
                 href="https://www.linkedin.com/in/jephmari/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 text-gray-400 hover:text-primary-300 bg-gray-800/50 hover:bg-primary-300/20 rounded-lg transition-all duration-300 ai-glow"
-                aria-label="Connect with Nyxpro AI on LinkedIn"
+                className="p-3 bg-[#0A66C2]/20 hover:bg-[#0A66C2]/30 border border-[#0A66C2]/40 hover:border-[#0A66C2]/60 rounded-xl transition-all duration-300 ai-glow group shadow-lg shadow-[#0A66C2]/10"
+                aria-label="Connect with Nyxpro on LinkedIn"
               >
-                <Linkedin size={18} />
+                <Linkedin className="w-5 h-5 text-[#0A66C2] group-hover:text-white transition-colors duration-300" />
               </a>
             </div>
-
-            {user ? (
-              <div className="flex items-center space-x-3">
-                <div className="flex items-center space-x-2 px-3 py-2 bg-gray-800/50 rounded-lg">
-                  <User className="w-4 h-4 text-primary-300" />
-                  <span className="text-sm text-gray-300 font-logo">
-                    {user.email}
-                  </span>
-                </div>
-                <button
-                  onClick={handleSignOut}
-                  className="p-2 text-gray-400 hover:text-red-400 bg-gray-800/50 hover:bg-red-500/20 rounded-lg transition-all duration-300"
-                  aria-label="Sign out"
-                >
-                  <LogOut className="w-4 h-4" />
-                </button>
-              </div>
-            ) : (
-              <button
-                className="btn-primary font-logo"
-                onClick={() => setIsAuthModalOpen(true)}
-                disabled={loading}
-              >
-                {loading ? "Loading..." : "Get Started"}
-              </button>
-            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -161,7 +129,7 @@ const Header = () => {
                 className="text-gray-300 hover:text-primary-300 transition-all duration-300 py-2 px-4 rounded-lg hover:bg-gray-800/30 font-logo"
                 onClick={() => setIsMenuOpen(false)}
               >
-                AI Services
+                Services
               </Link>
               <Link
                 href="#about"
@@ -185,65 +153,33 @@ const Header = () => {
                 Contact
               </Link>
 
-              {/* Mobile Social & Auth */}
+              {/* Mobile Social Media */}
               <div className="pt-4 border-t border-gray-800/50">
-                <div className="flex items-center space-x-4 mb-4">
+                <div className="flex items-center justify-center space-x-4">
                   <a
                     href="https://www.facebook.com/nyxpro2022"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 text-gray-400 hover:text-primary-300 bg-gray-800/50 hover:bg-primary-300/20 rounded-lg transition-all duration-300"
-                    aria-label="Follow Nyxpro AI on Facebook"
+                    className="p-3 bg-[#1877F2]/20 hover:bg-[#1877F2]/30 border border-[#1877F2]/40 hover:border-[#1877F2]/60 rounded-xl transition-all duration-300 ai-glow group shadow-lg shadow-[#1877F2]/10"
+                    aria-label="Follow Nyxpro on Facebook"
                   >
-                    <Facebook size={18} />
+                    <Facebook className="w-5 h-5 text-[#1877F2] group-hover:text-white transition-colors duration-300" />
                   </a>
                   <a
                     href="https://www.linkedin.com/in/jephmari/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 text-gray-400 hover:text-primary-300 bg-gray-800/50 hover:bg-primary-300/20 rounded-lg transition-all duration-300"
-                    aria-label="Connect with Nyxpro AI on LinkedIn"
+                    className="p-3 bg-[#0A66C2]/20 hover:bg-[#0A66C2]/30 border border-[#0A66C2]/40 hover:border-[#0A66C2]/60 rounded-xl transition-all duration-300 ai-glow group shadow-lg shadow-[#0A66C2]/10"
+                    aria-label="Connect with Nyxpro on LinkedIn"
                   >
-                    <Linkedin size={18} />
+                    <Linkedin className="w-5 h-5 text-[#0A66C2] group-hover:text-white transition-colors duration-300" />
                   </a>
                 </div>
-
-                {user ? (
-                  <div className="flex items-center justify-between p-3 bg-gray-800/30 rounded-lg">
-                    <div className="flex items-center space-x-2">
-                      <User className="w-4 h-4 text-primary-300" />
-                      <span className="text-sm text-gray-300 font-logo">
-                        {user.email}
-                      </span>
-                    </div>
-                    <button
-                      onClick={handleSignOut}
-                      className="p-2 text-gray-400 hover:text-red-400 rounded-lg transition-colors"
-                      aria-label="Sign out"
-                    >
-                      <LogOut className="w-4 h-4" />
-                    </button>
-                  </div>
-                ) : (
-                  <button
-                    className="btn-primary w-full font-logo"
-                    onClick={() => setIsAuthModalOpen(true)}
-                    disabled={loading}
-                  >
-                    {loading ? "Loading..." : "Get Started"}
-                  </button>
-                )}
               </div>
             </nav>
           </div>
         )}
       </div>
-
-      {/* Auth Modal */}
-      <AuthModal
-        isOpen={isAuthModalOpen}
-        onClose={() => setIsAuthModalOpen(false)}
-      />
     </header>
   );
 };
