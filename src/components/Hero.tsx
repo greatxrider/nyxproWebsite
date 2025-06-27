@@ -266,7 +266,7 @@ const Hero = () => {
 
                   <Image
                     src="/images/nyxproLogo.jpg"
-                    alt="Nyxpro AI Agency - Intelligent Technology Solutions"
+                    alt="Nyxpro IT Consulting and Services - Intelligent Technology Solutions"
                     width={320}
                     height={320}
                     className="relative z-10 rounded-full shadow-2xl group-hover:scale-105 transition-all duration-500"

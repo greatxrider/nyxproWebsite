@@ -3,12 +3,20 @@ import { AuthProvider } from "@/components/AuthProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Nyxpro - AI Agency & IT Consulting",
+  title: "Nyxpro - IT Consulting and Services",
   description:
-    "Nyxpro is a cutting-edge AI agency specializing in IT consulting, software development, and intelligent automation solutions to transform your business.",
+    "Nyxpro is a cutting-edge IT consulting and services company specializing in software development, AI automation, and intelligent technology solutions to transform your business.",
   keywords:
-    "AI agency, IT consulting, software development, AI automation, artificial intelligence, machine learning, digital transformation",
-  authors: [{ name: "Nyxpro AI Team" }],
+    "IT consulting, software development, AI automation, artificial intelligence, machine learning, digital transformation, technology services",
+  authors: [{ name: "Nyxpro IT Consulting and Services" }],
+  openGraph: {
+    title: "Nyxpro - IT Consulting and Services",
+    description:
+      "Transform your business with cutting-edge IT consulting, software development, and AI automation solutions.",
+    url: "https://nyxpro.us",
+    siteName: "Nyxpro IT Consulting and Services",
+    type: "website",
+  },
 };
 
 export const viewport = {

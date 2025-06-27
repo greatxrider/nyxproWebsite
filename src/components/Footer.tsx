@@ -96,7 +96,7 @@ const Footer = () => {
               <div className="relative">
                 <Image
                   src="/images/nyxproLogo.jpg"
-                  alt="Nyxpro AI Agency Logo"
+                  alt="Nyxpro IT Consulting and Services Logo"
                   width={50}
                   height={50}
                   className="rounded-xl shadow-lg ai-glow"
@@ -107,7 +107,9 @@ const Footer = () => {
                 <h3 className="text-2xl font-bold gradient-text font-logo">
                   Nyxpro
                 </h3>
-                <div className="text-sm text-gray-400 font-logo">AI Agency</div>
+                <div className="text-sm text-gray-400 font-logo">
+                  IT Consulting and Services
+                </div>
               </div>
             </div>
 
@@ -336,7 +338,8 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-center md:text-left">
             <p className="text-gray-400 font-logo">
-              © {currentYear} Nyxpro AI Agency. All rights reserved.
+              © {currentYear} Nyxpro IT Consulting and Services. All rights
+              reserved.
             </p>
             <p className="text-gray-500 text-sm font-logo">
               Powered by Neural Intelligence & Advanced AI Architecture

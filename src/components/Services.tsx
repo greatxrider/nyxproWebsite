@@ -433,7 +433,7 @@ const Services = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
             <div>
               <h3 className="text-3xl lg:text-4xl font-bold mb-8 ai-heading">
-                Why Choose Nyxpro AI Agency?
+                Why Choose Nyxpro IT Consulting and Services?
               </h3>
               <div className="space-y-8">
                 <div className="flex items-start space-x-6">

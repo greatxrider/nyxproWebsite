@@ -26,32 +26,40 @@ const About = () => {
 
   const founders = [
     {
-      name: "Jeph Mari",
-      role: "Co-Founder & CEO",
-      image: "/images/jephMari.jpg",
-      bio: "Visionary leader driving Nyxpro's mission to revolutionize business operations through AI-powered solutions and intelligent automation technologies.",
-      expertise: [
-        "AI Strategy",
+      name: "Jeph Paul",
+      role: "Founder and CEO",
+      expertise: "Business Strategy & Leadership",
+      image: "/images/jephPaul.jpg",
+      description:
+        "Visionary business leader and strategic architect driving Nyxpro's mission to transform organizations through intelligent technology solutions. Expert in executive decision-making, business development, and strategic partnerships that accelerate company growth and market expansion.",
+      specialties: [
+        "Business Strategy",
+        "Strategic Planning",
+        "Leadership",
         "Business Development",
-        "Digital Transformation",
-        "Technology Leadership",
+        "Operations Management",
+        "Executive Decision Making",
       ],
-      achievements: "5+ years in AI implementation",
-      focus: "Scaling AI solutions for enterprise clients",
+      achievements:
+        "Led strategic growth initiatives resulting in 300% business expansion",
     },
     {
-      name: "Jeph Paul",
-      role: "Co-Founder & CTO",
-      image: "/images/jephPaul.jpg",
-      bio: "Technical architect specializing in AI infrastructure, machine learning systems, and scalable technology solutions that power intelligent business operations.",
-      expertise: [
-        "AI/ML Engineering",
-        "System Architecture",
-        "Software Development",
-        "Cloud Infrastructure",
+      name: "Jeph Mari",
+      role: "Co-Founder and CTO",
+      expertise: "AI Automation & Robotics Engineering",
+      image: "/images/jephMari.jpg",
+      description:
+        "Electronics and Software Engineer specializing in AI automation systems and robotics implementation. Technical visionary behind Nyxpro's cutting-edge AI architecture, driving innovation in intelligent automation solutions and enterprise-grade technology deployment.",
+      specialties: [
+        "AI Automation Specialist",
+        "Robotics Implementation",
+        "AI Architecture",
+        "Software Engineering",
+        "Technical Leadership",
+        "Systems Integration",
       ],
-      achievements: "Expert in ML model deployment",
-      focus: "Building next-generation AI systems",
+      achievements:
+        "Architected 200+ AI automation systems across diverse industries",
     },
   ];
 
@@ -84,28 +92,40 @@ const About = () => {
 
   const teamMembers = [
     {
-      name: "Jeph Mari Roble",
-      role: "CEO & AI Solutions Architect",
-      expertise: "Neural Networks & Machine Learning",
-      image: "/images/jephMari.jpg",
-      description:
-        "Visionary leader with 5+ years of experience in AI implementation and digital transformation. Specializes in developing intelligent automation solutions that drive exponential business growth.",
-      specialties: [
-        "Deep Learning",
-        "Computer Vision",
-        "Natural Language Processing",
-      ],
-      achievements: "Led 100+ AI transformation projects",
-    },
-    {
-      name: "Jeph Paul Roble",
-      role: "CTO & AI Engineering Lead",
-      expertise: "AI Architecture & Software Development",
+      name: "Jeph Paul",
+      role: "Founder and CEO",
+      expertise: "Business Strategy & Leadership",
       image: "/images/jephPaul.jpg",
       description:
-        "Technical mastermind behind our cutting-edge AI systems. Expert in scalable architecture design, machine learning operations, and enterprise-grade AI deployment strategies.",
-      specialties: ["AI Infrastructure", "Cloud Computing", "DevOps"],
-      achievements: "Architected 50+ enterprise AI systems",
+        "Visionary business leader and strategic architect driving Nyxpro's mission to transform organizations through intelligent technology solutions. Expert in executive decision-making, business development, and strategic partnerships that accelerate company growth and market expansion.",
+      specialties: [
+        "Business Strategy",
+        "Strategic Planning",
+        "Leadership",
+        "Business Development",
+        "Operations Management",
+        "Executive Decision Making",
+      ],
+      achievements:
+        "Led strategic growth initiatives resulting in 300% business expansion",
+    },
+    {
+      name: "Jeph Mari",
+      role: "Co-Founder and CTO",
+      expertise: "AI Automation & Robotics Engineering",
+      image: "/images/jephMari.jpg",
+      description:
+        "Electronics and Software Engineer specializing in AI automation systems and robotics implementation. Technical visionary behind Nyxpro's cutting-edge AI architecture, driving innovation in intelligent automation solutions and enterprise-grade technology deployment.",
+      specialties: [
+        "AI Automation Specialist",
+        "Robotics Implementation",
+        "AI Architecture",
+        "Software Engineering",
+        "Technical Leadership",
+        "Systems Integration",
+      ],
+      achievements:
+        "Architected 200+ AI automation systems across diverse industries",
     },
   ];
 
@@ -192,7 +212,7 @@ const About = () => {
             <div className="w-12 h-0.5 bg-gradient-to-r from-transparent to-primary-300"></div>
             <span className="text-sm font-medium tracking-wide px-4 py-2 bg-primary-300/10 rounded-full border border-primary-300/30 font-logo">
               <Users className="inline w-4 h-4 mr-2" />
-              About Nyxpro AI Agency
+              About Nyxpro IT Consulting and Services
             </span>
             <div className="w-12 h-0.5 bg-gradient-to-l from-transparent to-primary-300"></div>
           </div>
@@ -204,11 +224,11 @@ const About = () => {
             <span className="text-white block">for Digital Future</span>
           </h2>
 
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed font-logo">
-            Nyxpro is a cutting-edge AI agency that transforms businesses
-            through intelligent automation, advanced analytics, and innovative
-            technology solutions that drive sustainable growth and operational
-            excellence.
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-logo">
+            At Nyxpro IT Consulting and Services, we're not just building
+            software—we're architecting the future of intelligent business
+            operations through revolutionary AI solutions that transform how
+            organizations operate, compete, and thrive.
           </p>
         </div>
 
@@ -221,7 +241,7 @@ const About = () => {
             <div className="space-y-6 text-gray-300 leading-relaxed font-logo">
               <p className="text-lg">
                 <strong className="text-primary-300 font-logo">
-                  At Nyxpro AI Agency,
+                  At Nyxpro IT Consulting and Services,
                 </strong>{" "}
                 we specialize in transforming traditional business operations
                 through artificial intelligence, machine learning, and
@@ -270,10 +290,11 @@ const About = () => {
             <div className="relative bg-gradient-to-br from-black via-gray-900/50 to-black rounded-3xl p-8 border border-gray-800 ai-glow">
               <Image
                 src="/images/nyxproLogo.jpg"
-                alt="Nyxpro AI Agency - Intelligent Technology Solutions"
-                width={400}
-                height={300}
-                className="rounded-2xl shadow-lg"
+                alt="Nyxpro IT Consulting and Services - Intelligent Technology Solutions"
+                width={320}
+                height={320}
+                className="rounded-2xl shadow-xl"
+                priority
               />
               {/* AI Overlay Effects */}
               <div className="absolute inset-0 bg-gradient-to-tr from-primary-300/20 via-transparent to-electric-400/20 rounded-3xl"></div>
@@ -289,123 +310,193 @@ const About = () => {
           </div>
         </div>
 
-        {/* Team Carousel Section */}
+        {/* Founders Section */}
         <div className="mb-20" id="team">
-          <h3 className="text-2xl lg:text-3xl font-bold text-center mb-12 text-white font-logo">
-            Meet Our <span className="gradient-text">AI Leadership Team</span>
-          </h3>
+          <div className="text-center mb-16">
+            <h3 className="text-3xl lg:text-4xl font-bold mb-6 ai-heading">
+              Meet Our Founders
+            </h3>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto font-logo">
+              Visionary leaders and technical experts driving the future of
+              intelligent business solutions with deep expertise in strategic
+              planning, AI automation, and cutting-edge technology
+              implementation.
+            </p>
+          </div>
 
-          <div className="relative max-w-4xl mx-auto">
-            {/* Carousel Container */}
-            <div className="relative overflow-hidden rounded-2xl">
-              <div
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-              >
-                {teamMembers.map((member, index) => (
-                  <div key={index} className="w-full flex-shrink-0">
-                    <div className="team-carousel-card mx-4">
-                      <div className="grid md:grid-cols-2 gap-8 items-center">
-                        {/* Left: Image */}
-                        <div className="relative">
-                          <div className="relative w-64 h-64 mx-auto">
-                            <Image
-                              src={member.image}
-                              alt={`${member.name}, ${member.role} of Nyxpro AI Agency`}
-                              fill
-                              className="rounded-2xl object-cover border-2 border-primary-300/30 hover:border-primary-300/50 transition-colors duration-300"
-                            />
-                            {/* AI Enhancement Ring */}
-                            <div className="absolute inset-0 border-2 border-electric-400/30 rounded-2xl animate-pulse"></div>
-                          </div>
+          <div className="relative">
+            {/* Founders Carousel Container */}
+            <div className="bg-gradient-to-r from-black via-gray-900/30 to-black rounded-3xl p-12 border border-gray-800 ai-glow overflow-hidden relative">
+              {/* Animated Background */}
+              <div className="absolute inset-0 neural-bg opacity-20"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-300/5 via-transparent to-electric-400/5 animate-circuit"></div>
 
-                          {/* AI Badge */}
-                          <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-gradient-to-r from-primary-300 to-electric-400 rounded-full flex items-center justify-center ai-glow">
-                            <Brain className="w-6 h-6 text-black" />
-                          </div>
-                        </div>
-
-                        {/* Right: Content */}
-                        <div className="space-y-6">
-                          <div>
-                            <h4 className="text-2xl font-bold mb-2 text-white font-logo">
-                              {member.name}
-                            </h4>
-                            <p className="text-primary-300 font-medium mb-4 font-logo">
-                              {member.role}
-                            </p>
-                            <p className="text-gray-300 leading-relaxed mb-4 font-logo">
-                              {member.description}
-                            </p>
-                          </div>
-
-                          {/* Achievements */}
-                          <div className="space-y-3">
-                            <div className="flex items-center space-x-3">
-                              <Star className="w-4 h-4 text-primary-300" />
-                              <span className="text-sm text-gray-300 font-logo">
-                                {member.achievements}
-                              </span>
-                            </div>
-                          </div>
-
-                          {/* Expertise Tags */}
-                          <div className="space-y-2">
-                            <h5 className="font-semibold text-white text-sm font-logo">
-                              Core Expertise:
-                            </h5>
-                            <div className="flex flex-wrap gap-2">
-                              {member.specialties.map(
-                                (specialty, skillIndex) => (
-                                  <span
-                                    key={skillIndex}
-                                    className="px-3 py-1 bg-primary-300/20 border border-primary-300/30 text-primary-300 text-xs font-medium rounded-full hover:bg-primary-300/30 transition-colors duration-300 font-logo"
-                                  >
-                                    {specialty}
+              <div className="relative z-10">
+                <div className="relative overflow-hidden rounded-2xl">
+                  <div
+                    className="flex transition-transform duration-500 ease-in-out"
+                    style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                  >
+                    {teamMembers.map((founder, index) => (
+                      <div key={index} className="w-full flex-shrink-0">
+                        <div className="mx-4">
+                          <div className="grid lg:grid-cols-2 gap-12 items-center">
+                            {/* Founder Info */}
+                            <div className="space-y-8">
+                              <div>
+                                <div className="flex items-center space-x-3 mb-4">
+                                  <div className="w-12 h-1 bg-gradient-to-r from-primary-300 to-electric-400 rounded-full"></div>
+                                  <span className="text-primary-300 font-medium font-logo">
+                                    Leadership Excellence
                                   </span>
-                                )
-                              )}
+                                </div>
+
+                                <h4 className="text-3xl font-bold text-white mb-2 font-logo">
+                                  {founder.name}
+                                </h4>
+
+                                <div className="flex flex-col space-y-2 mb-6">
+                                  <span className="text-electric-400 text-lg font-semibold font-logo">
+                                    {founder.role}
+                                  </span>
+                                  <span className="text-primary-300/80 font-logo">
+                                    {founder.expertise}
+                                  </span>
+                                </div>
+                              </div>
+
+                              <p className="text-gray-300 leading-relaxed text-lg font-logo">
+                                {founder.description}
+                              </p>
+
+                              {/* Core Specialties */}
+                              <div>
+                                <h5 className="text-white font-semibold mb-4 font-logo">
+                                  Core Specialties:
+                                </h5>
+                                <div className="grid grid-cols-2 gap-3">
+                                  {founder.specialties.map(
+                                    (specialty, index) => (
+                                      <span
+                                        key={index}
+                                        className="px-4 py-2 bg-primary-300/10 border border-primary-300/30 rounded-lg text-primary-300 text-sm font-logo text-center hover:bg-primary-300/20 transition-colors duration-300"
+                                      >
+                                        {specialty}
+                                      </span>
+                                    )
+                                  )}
+                                </div>
+                              </div>
+
+                              {/* Key Achievement */}
+                              <div className="flex items-start space-x-3 p-4 bg-black/50 rounded-xl border border-gray-800">
+                                <Trophy className="w-6 h-6 text-electric-400 flex-shrink-0 mt-1" />
+                                <div>
+                                  <h6 className="font-semibold text-white mb-1 font-logo">
+                                    Key Achievement
+                                  </h6>
+                                  <span className="text-gray-300 font-logo text-sm">
+                                    {founder.achievements}
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+
+                            {/* Founder Image */}
+                            <div className="text-center">
+                              <div className="relative inline-block">
+                                {/* Professional Enhancement Rings */}
+                                <div className="absolute inset-0 flex items-center justify-center">
+                                  <div className="w-80 h-80 border border-primary-300/20 rounded-full animate-spin-slow"></div>
+                                </div>
+                                <div className="absolute inset-0 flex items-center justify-center">
+                                  <div className="w-96 h-96 border border-electric-400/15 rounded-full animate-spin-reverse"></div>
+                                </div>
+
+                                {/* Image Container */}
+                                <div className="relative z-10 p-6">
+                                  <div className="relative group">
+                                    <div className="absolute inset-0 bg-gradient-to-r from-primary-300/20 to-electric-400/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+
+                                    <Image
+                                      src={founder.image}
+                                      alt={`${founder.name} - ${founder.role} of Nyxpro IT Consulting and Services`}
+                                      width={280}
+                                      height={280}
+                                      className="relative z-10 rounded-full shadow-2xl border-4 border-gray-800 group-hover:scale-105 transition-all duration-500"
+                                    />
+
+                                    {/* Professional Badge */}
+                                    <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-primary-300 to-electric-400 text-black px-6 py-2 rounded-full font-semibold text-sm shadow-lg font-logo z-20">
+                                      {founder.role.includes("CEO")
+                                        ? "Chief Executive"
+                                        : "Technical Leader"}
+                                    </div>
+                                  </div>
+                                </div>
+
+                                {/* Floating Professional Indicators */}
+                                <div className="absolute top-8 -left-8 bg-black/80 backdrop-blur-sm px-3 py-2 rounded-full border border-primary-300/30 z-30">
+                                  <div className="flex items-center space-x-2">
+                                    <Target className="w-4 h-4 text-primary-300" />
+                                    <span className="text-xs text-primary-300 font-logo">
+                                      Strategic Vision
+                                    </span>
+                                  </div>
+                                </div>
+
+                                <div className="absolute bottom-8 -right-8 bg-black/80 backdrop-blur-sm px-3 py-2 rounded-full border border-electric-400/30 z-30">
+                                  <div className="flex items-center space-x-2">
+                                    <Zap className="w-4 h-4 text-electric-400" />
+                                    <span className="text-xs text-electric-400 font-logo">
+                                      Innovation
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
+                    ))}
                   </div>
-                ))}
+                </div>
+
+                {/* Carousel Controls */}
+                <div className="flex items-center justify-center space-x-6 mt-12">
+                  <button
+                    onClick={prevSlide}
+                    className="p-3 bg-gray-800 hover:bg-primary-300/20 border border-gray-700 hover:border-primary-300/50 rounded-full transition-all duration-300 group"
+                    aria-label="Previous founder"
+                  >
+                    <ChevronLeft className="w-6 h-6 text-gray-400 group-hover:text-primary-300" />
+                  </button>
+
+                  {/* Slide Indicators */}
+                  <div className="flex space-x-3">
+                    {teamMembers.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentSlide(index)}
+                        className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                          index === currentSlide
+                            ? "bg-primary-300 scale-125"
+                            : "bg-gray-600 hover:bg-gray-500"
+                        }`}
+                        aria-label={`Go to founder ${index + 1}`}
+                      />
+                    ))}
+                  </div>
+
+                  <button
+                    onClick={nextSlide}
+                    className="p-3 bg-gray-800 hover:bg-primary-300/20 border border-gray-700 hover:border-primary-300/50 rounded-full transition-all duration-300 group"
+                    aria-label="Next founder"
+                  >
+                    <ChevronRight className="w-6 h-6 text-gray-400 group-hover:text-primary-300" />
+                  </button>
+                </div>
               </div>
-            </div>
-
-            {/* Carousel Controls */}
-            <button
-              onClick={prevSlide}
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 w-12 h-12 bg-black/80 hover:bg-primary-300/20 border border-gray-800 hover:border-primary-300/50 rounded-full flex items-center justify-center transition-all duration-300 ai-glow"
-              aria-label="Previous team member"
-            >
-              <ChevronLeft className="w-5 h-5 text-primary-300" />
-            </button>
-
-            <button
-              onClick={nextSlide}
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 w-12 h-12 bg-black/80 hover:bg-primary-300/20 border border-gray-800 hover:border-primary-300/50 rounded-full flex items-center justify-center transition-all duration-300 ai-glow"
-              aria-label="Next team member"
-            >
-              <ChevronRight className="w-5 h-5 text-primary-300" />
-            </button>
-
-            {/* Carousel Indicators */}
-            <div className="flex justify-center space-x-3 mt-8">
-              {teamMembers.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide
-                      ? "bg-primary-300 shadow-lg shadow-primary-300/50"
-                      : "bg-gray-600 hover:bg-gray-500"
-                  }`}
-                  aria-label={`Go to team member ${index + 1}`}
-                />
-              ))}
             </div>
           </div>
         </div>
