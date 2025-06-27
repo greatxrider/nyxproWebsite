@@ -86,19 +86,19 @@ const Header = () => {
                 href="https://www.facebook.com/nyxpro2022"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-[#1877F2]/20 hover:bg-[#1877F2]/30 border border-[#1877F2]/40 hover:border-[#1877F2]/60 rounded-xl transition-all duration-300 ai-glow group shadow-lg shadow-[#1877F2]/10"
+                className="p-3 bg-primary-300/20 hover:bg-primary-300/30 border border-primary-300/40 hover:border-primary-300/60 rounded-xl transition-all duration-300 ai-glow group shadow-lg shadow-primary-300/10"
                 aria-label="Follow Nyxpro on Facebook"
               >
-                <Facebook className="w-5 h-5 text-[#1877F2] group-hover:text-white transition-colors duration-300" />
+                <Facebook className="w-5 h-5 text-primary-300 group-hover:text-white transition-colors duration-300" />
               </a>
               <a
                 href="https://www.linkedin.com/in/jephmari/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-[#0A66C2]/20 hover:bg-[#0A66C2]/30 border border-[#0A66C2]/40 hover:border-[#0A66C2]/60 rounded-xl transition-all duration-300 ai-glow group shadow-lg shadow-[#0A66C2]/10"
+                className="p-3 bg-primary-300/20 hover:bg-primary-300/30 border border-primary-300/40 hover:border-primary-300/60 rounded-xl transition-all duration-300 ai-glow group shadow-lg shadow-primary-300/10"
                 aria-label="Connect with Nyxpro on LinkedIn"
               >
-                <Linkedin className="w-5 h-5 text-[#0A66C2] group-hover:text-white transition-colors duration-300" />
+                <Linkedin className="w-5 h-5 text-primary-300 group-hover:text-white transition-colors duration-300" />
               </a>
             </div>
           </div>
@@ -160,19 +160,19 @@ const Header = () => {
                     href="https://www.facebook.com/nyxpro2022"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-[#1877F2]/20 hover:bg-[#1877F2]/30 border border-[#1877F2]/40 hover:border-[#1877F2]/60 rounded-xl transition-all duration-300 ai-glow group shadow-lg shadow-[#1877F2]/10"
+                    className="p-3 bg-primary-300/20 hover:bg-primary-300/30 border border-primary-300/40 hover:border-primary-300/60 rounded-xl transition-all duration-300 ai-glow group shadow-lg shadow-primary-300/10"
                     aria-label="Follow Nyxpro on Facebook"
                   >
-                    <Facebook className="w-5 h-5 text-[#1877F2] group-hover:text-white transition-colors duration-300" />
+                    <Facebook className="w-5 h-5 text-primary-300 group-hover:text-white transition-colors duration-300" />
                   </a>
                   <a
                     href="https://www.linkedin.com/in/jephmari/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-[#0A66C2]/20 hover:bg-[#0A66C2]/30 border border-[#0A66C2]/40 hover:border-[#0A66C2]/60 rounded-xl transition-all duration-300 ai-glow group shadow-lg shadow-[#0A66C2]/10"
+                    className="p-3 bg-primary-300/20 hover:bg-primary-300/30 border border-primary-300/40 hover:border-primary-300/60 rounded-xl transition-all duration-300 ai-glow group shadow-lg shadow-primary-300/10"
                     aria-label="Connect with Nyxpro on LinkedIn"
                   >
-                    <Linkedin className="w-5 h-5 text-[#0A66C2] group-hover:text-white transition-colors duration-300" />
+                    <Linkedin className="w-5 h-5 text-primary-300 group-hover:text-white transition-colors duration-300" />
                   </a>
                 </div>
               </div>
