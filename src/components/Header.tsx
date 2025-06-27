@@ -30,16 +30,18 @@ const Header = () => {
               <div className="relative">
                 <Image
                   src="/images/nyxproLogo.jpg"
-                  alt="Nyxpro Business Solutions Logo"
+                  alt="Nyxpro AI Agency Logo"
                   width={45}
                   height={45}
                   className="rounded-xl shadow-lg ai-glow"
                 />
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-primary-500/20 to-accent-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-primary-300/20 to-electric-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div>
-                <span className="text-2xl font-bold gradient-text">Nyxpro</span>
-                <div className="text-xs text-gray-400">Business Solutions</div>
+                <span className="text-2xl font-bold gradient-text font-logo">
+                  Nyxpro
+                </span>
+                <div className="text-xs text-gray-400 font-logo">AI Agency</div>
               </div>
             </Link>
           </div>
@@ -48,38 +50,38 @@ const Header = () => {
           <nav className="hidden lg:flex items-center space-x-8">
             <Link
               href="#home"
-              className="text-gray-300 hover:text-primary-400 transition-all duration-300 font-medium relative group"
+              className="text-gray-300 hover:text-primary-300 transition-all duration-300 font-medium relative group font-logo"
             >
               Home
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-400 to-accent-400 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-300 to-electric-400 group-hover:w-full transition-all duration-300"></span>
             </Link>
             <Link
               href="#services"
-              className="text-gray-300 hover:text-primary-400 transition-all duration-300 font-medium relative group"
+              className="text-gray-300 hover:text-primary-300 transition-all duration-300 font-medium relative group font-logo"
             >
-              Services
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-400 to-accent-400 group-hover:w-full transition-all duration-300"></span>
+              AI Services
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-300 to-electric-400 group-hover:w-full transition-all duration-300"></span>
             </Link>
             <Link
               href="#about"
-              className="text-gray-300 hover:text-primary-400 transition-all duration-300 font-medium relative group"
+              className="text-gray-300 hover:text-primary-300 transition-all duration-300 font-medium relative group font-logo"
             >
-              About
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-400 to-accent-400 group-hover:w-full transition-all duration-300"></span>
+              About Us
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-300 to-electric-400 group-hover:w-full transition-all duration-300"></span>
             </Link>
             <Link
               href="#team"
-              className="text-gray-300 hover:text-primary-400 transition-all duration-300 font-medium relative group"
+              className="text-gray-300 hover:text-primary-300 transition-all duration-300 font-medium relative group font-logo"
             >
               Our Team
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-400 to-accent-400 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-300 to-electric-400 group-hover:w-full transition-all duration-300"></span>
             </Link>
             <Link
               href="#connect"
-              className="text-gray-300 hover:text-primary-400 transition-all duration-300 font-medium relative group"
+              className="text-gray-300 hover:text-primary-300 transition-all duration-300 font-medium relative group font-logo"
             >
-              Connect
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-400 to-accent-400 group-hover:w-full transition-all duration-300"></span>
+              Contact
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-300 to-electric-400 group-hover:w-full transition-all duration-300"></span>
             </Link>
           </nav>
 
@@ -90,8 +92,8 @@ const Header = () => {
                 href="https://www.facebook.com/nyxpro2022"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 text-gray-400 hover:text-primary-400 bg-gray-800/50 hover:bg-primary-500/20 rounded-lg transition-all duration-300 ai-glow"
-                aria-label="Follow Nyxpro on Facebook"
+                className="p-2 text-gray-400 hover:text-primary-300 bg-gray-800/50 hover:bg-primary-300/20 rounded-lg transition-all duration-300 ai-glow"
+                aria-label="Follow Nyxpro AI on Facebook"
               >
                 <Facebook size={18} />
               </a>
@@ -99,8 +101,8 @@ const Header = () => {
                 href="https://www.linkedin.com/in/jephmari/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 text-gray-400 hover:text-primary-400 bg-gray-800/50 hover:bg-primary-500/20 rounded-lg transition-all duration-300 ai-glow"
-                aria-label="Connect with Nyxpro on LinkedIn"
+                className="p-2 text-gray-400 hover:text-primary-300 bg-gray-800/50 hover:bg-primary-300/20 rounded-lg transition-all duration-300 ai-glow"
+                aria-label="Connect with Nyxpro AI on LinkedIn"
               >
                 <Linkedin size={18} />
               </a>
@@ -109,8 +111,10 @@ const Header = () => {
             {user ? (
               <div className="flex items-center space-x-3">
                 <div className="flex items-center space-x-2 px-3 py-2 bg-gray-800/50 rounded-lg">
-                  <User className="w-4 h-4 text-primary-400" />
-                  <span className="text-sm text-gray-300">{user.email}</span>
+                  <User className="w-4 h-4 text-primary-300" />
+                  <span className="text-sm text-gray-300 font-logo">
+                    {user.email}
+                  </span>
                 </div>
                 <button
                   onClick={handleSignOut}
@@ -122,7 +126,7 @@ const Header = () => {
               </div>
             ) : (
               <button
-                className="btn-primary"
+                className="btn-primary font-logo"
                 onClick={() => setIsAuthModalOpen(true)}
                 disabled={loading}
               >
@@ -134,7 +138,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden p-2 rounded-lg text-gray-300 hover:text-primary-400 bg-gray-800/50 hover:bg-primary-500/20 transition-all duration-300"
+            className="md:hidden p-2 rounded-lg text-gray-300 hover:text-primary-300 bg-gray-800/50 hover:bg-primary-300/20 transition-all duration-300"
             aria-label="Toggle mobile menu"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -147,38 +151,38 @@ const Header = () => {
             <nav className="flex flex-col space-y-4">
               <Link
                 href="#home"
-                className="text-gray-300 hover:text-primary-400 transition-all duration-300 py-2 px-4 rounded-lg hover:bg-gray-800/30"
+                className="text-gray-300 hover:text-primary-300 transition-all duration-300 py-2 px-4 rounded-lg hover:bg-gray-800/30 font-logo"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
               <Link
                 href="#services"
-                className="text-gray-300 hover:text-primary-400 transition-all duration-300 py-2 px-4 rounded-lg hover:bg-gray-800/30"
+                className="text-gray-300 hover:text-primary-300 transition-all duration-300 py-2 px-4 rounded-lg hover:bg-gray-800/30 font-logo"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Services
+                AI Services
               </Link>
               <Link
                 href="#about"
-                className="text-gray-300 hover:text-primary-400 transition-all duration-300 py-2 px-4 rounded-lg hover:bg-gray-800/30"
+                className="text-gray-300 hover:text-primary-300 transition-all duration-300 py-2 px-4 rounded-lg hover:bg-gray-800/30 font-logo"
                 onClick={() => setIsMenuOpen(false)}
               >
-                About
+                About Us
               </Link>
               <Link
                 href="#team"
-                className="text-gray-300 hover:text-primary-400 transition-all duration-300 py-2 px-4 rounded-lg hover:bg-gray-800/30"
+                className="text-gray-300 hover:text-primary-300 transition-all duration-300 py-2 px-4 rounded-lg hover:bg-gray-800/30 font-logo"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Our Team
               </Link>
               <Link
                 href="#connect"
-                className="text-gray-300 hover:text-primary-400 transition-all duration-300 py-2 px-4 rounded-lg hover:bg-gray-800/30"
+                className="text-gray-300 hover:text-primary-300 transition-all duration-300 py-2 px-4 rounded-lg hover:bg-gray-800/30 font-logo"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Connect
+                Contact
               </Link>
 
               {/* Mobile Social & Auth */}
@@ -188,8 +192,8 @@ const Header = () => {
                     href="https://www.facebook.com/nyxpro2022"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 text-gray-400 hover:text-primary-400 bg-gray-800/50 hover:bg-primary-500/20 rounded-lg transition-all duration-300"
-                    aria-label="Follow Nyxpro on Facebook"
+                    className="p-2 text-gray-400 hover:text-primary-300 bg-gray-800/50 hover:bg-primary-300/20 rounded-lg transition-all duration-300"
+                    aria-label="Follow Nyxpro AI on Facebook"
                   >
                     <Facebook size={18} />
                   </a>
@@ -197,8 +201,8 @@ const Header = () => {
                     href="https://www.linkedin.com/in/jephmari/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 text-gray-400 hover:text-primary-400 bg-gray-800/50 hover:bg-primary-500/20 rounded-lg transition-all duration-300"
-                    aria-label="Connect with Nyxpro on LinkedIn"
+                    className="p-2 text-gray-400 hover:text-primary-300 bg-gray-800/50 hover:bg-primary-300/20 rounded-lg transition-all duration-300"
+                    aria-label="Connect with Nyxpro AI on LinkedIn"
                   >
                     <Linkedin size={18} />
                   </a>
@@ -207,8 +211,8 @@ const Header = () => {
                 {user ? (
                   <div className="flex items-center justify-between p-3 bg-gray-800/30 rounded-lg">
                     <div className="flex items-center space-x-2">
-                      <User className="w-4 h-4 text-primary-400" />
-                      <span className="text-sm text-gray-300">
+                      <User className="w-4 h-4 text-primary-300" />
+                      <span className="text-sm text-gray-300 font-logo">
                         {user.email}
                       </span>
                     </div>
@@ -222,7 +226,7 @@ const Header = () => {
                   </div>
                 ) : (
                   <button
-                    className="btn-primary w-full"
+                    className="btn-primary w-full font-logo"
                     onClick={() => setIsAuthModalOpen(true)}
                     disabled={loading}
                   >

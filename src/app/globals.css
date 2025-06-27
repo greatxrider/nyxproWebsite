@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,38 +9,350 @@
     }
 
     body {
-        font-family: 'Inter', sans-serif;
+        font-family: 'Space Grotesk', 'Inter', sans-serif;
+        background-color: #000000;
+        color: #ffffff;
     }
 }
 
 @layer components {
     .btn-primary {
-        @apply bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 shadow-lg hover:shadow-xl transform hover:scale-105;
+        @apply bg-black border-2 border-primary-300 text-primary-300 hover:bg-primary-300 hover:text-black font-medium py-3 px-6 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2 focus:ring-offset-black shadow-lg hover:shadow-primary-300/25 transform hover:scale-105;
     }
 
     .btn-secondary {
-        @apply bg-transparent border-2 border-primary-500 text-primary-400 hover:bg-primary-500 hover:text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 hover:shadow-lg;
+        @apply bg-transparent border-2 border-gray-600 text-gray-300 hover:border-primary-300 hover:text-primary-300 font-medium py-3 px-6 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2 focus:ring-offset-black;
     }
 
     .card {
-        @apply bg-gray-900/50 backdrop-blur-sm rounded-xl shadow-2xl hover:shadow-primary-500/20 transition-all duration-300 border border-gray-800 hover:border-primary-500/50;
+        @apply bg-gray-900/30 backdrop-blur-sm rounded-xl shadow-2xl hover:shadow-primary-300/20 transition-all duration-500 border border-gray-800 hover:border-primary-300/50 relative overflow-hidden;
+    }
+
+    .card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(94, 224, 229, 0.1), transparent);
+        transition: left 0.5s;
+    }
+
+    .card:hover::before {
+        left: 100%;
     }
 
     .gradient-text {
-        @apply bg-gradient-to-r from-primary-400 via-primary-500 to-accent-400 bg-clip-text text-transparent;
+        @apply bg-gradient-to-r from-primary-300 via-primary-400 to-electric-400 bg-clip-text text-transparent font-logo;
     }
 
     .ai-glow {
-        @apply shadow-lg shadow-primary-500/25 hover:shadow-primary-400/40 transition-shadow duration-300;
+        @apply shadow-lg shadow-primary-300/25 hover:shadow-primary-300/40 transition-all duration-300;
     }
 
-    .section-padding {
-        @apply py-16 px-4 sm:px-6 lg:px-8;
+    /* Enhanced AI Service Panel */
+    .ai-service-panel {
+        @apply relative bg-black/40 backdrop-blur-md border border-gray-800/50 rounded-2xl p-8 cursor-pointer transition-all duration-700 ease-out overflow-hidden;
+        background-image: radial-gradient(circle at 50% 50%, rgba(94, 224, 229, 0.05) 0%, transparent 70%);
     }
 
-    .geometric-bg {
+    .ai-service-panel::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, transparent 30%, rgba(94, 224, 229, 0.1) 50%, transparent 70%);
+        opacity: 0;
+        transition: opacity 0.6s ease;
+        pointer-events: none;
+    }
+
+    .ai-service-panel::after {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(45deg, rgba(94, 224, 229, 0.3), rgba(168, 85, 247, 0.3), rgba(14, 165, 233, 0.3));
+        border-radius: 1rem;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 0.6s ease;
+    }
+
+    .ai-service-panel:hover {
+        @apply transform scale-105 shadow-2xl border-primary-300/60;
+        box-shadow:
+            0 25px 50px -12px rgba(94, 224, 229, 0.25),
+            0 0 0 1px rgba(94, 224, 229, 0.1),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .ai-service-panel:hover::before {
+        opacity: 1;
+    }
+
+    .ai-service-panel:hover::after {
+        opacity: 1;
+    }
+
+    /* AI Icon Container with Advanced Effects */
+    .ai-icon-container {
+        @apply w-20 h-20 relative flex items-center justify-center rounded-2xl transition-all duration-500;
+        background: linear-gradient(135deg, rgba(94, 224, 229, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(94, 224, 229, 0.2);
+    }
+
+    .ai-icon-container::before {
+        content: '';
+        position: absolute;
+        inset: -2px;
+        border-radius: 1rem;
+        padding: 2px;
+        background: linear-gradient(45deg, rgba(94, 224, 229, 0.6), rgba(168, 85, 247, 0.6));
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask-composite: xor;
+        -webkit-mask-composite: xor;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+
+    .ai-service-panel:hover .ai-icon-container::before {
+        opacity: 1;
+    }
+
+    .ai-service-panel:hover .ai-icon-container {
+        @apply scale-110;
+        background: linear-gradient(135deg, rgba(94, 224, 229, 0.2) 0%, rgba(168, 85, 247, 0.2) 100%);
+        box-shadow:
+            0 0 20px rgba(94, 224, 229, 0.4),
+            0 0 40px rgba(94, 224, 229, 0.2);
+    }
+
+    /* Neural Network Connection Lines */
+    .neural-connection {
+        @apply absolute opacity-0 transition-opacity duration-1000;
+        background: linear-gradient(90deg, transparent, rgba(94, 224, 229, 0.6), transparent);
+        height: 1px;
+    }
+
+    .ai-service-panel:hover .neural-connection {
+        @apply opacity-100;
+        animation: data-flow 2s ease-in-out infinite;
+    }
+
+    /* Particle Effects */
+    .ai-particles {
+        @apply absolute inset-0 pointer-events-none overflow-hidden rounded-2xl;
+    }
+
+    .particle {
+        @apply absolute w-1 h-1 bg-primary-300 rounded-full opacity-0;
+        animation: particle-drift 15s linear infinite;
+    }
+
+    .particle:nth-child(1) {
+        top: 20%;
+        left: 10%;
+        animation-delay: 0s;
+    }
+
+    .particle:nth-child(2) {
+        top: 80%;
+        left: 20%;
+        animation-delay: 2s;
+    }
+
+    .particle:nth-child(3) {
+        top: 60%;
+        left: 80%;
+        animation-delay: 4s;
+    }
+
+    .particle:nth-child(4) {
+        top: 30%;
+        left: 70%;
+        animation-delay: 6s;
+    }
+
+    .particle:nth-child(5) {
+        top: 90%;
+        left: 50%;
+        animation-delay: 8s;
+    }
+
+    .ai-service-panel:hover .particle {
+        @apply opacity-60;
+    }
+
+    /* Advanced Morphing Background */
+    .morph-bg {
+        @apply absolute top-1/2 left-1/2 w-32 h-32 transform -translate-x-1/2 -translate-y-1/2 opacity-10;
+        background: linear-gradient(45deg, rgba(94, 224, 229, 0.3), rgba(168, 85, 247, 0.3));
+        animation: morph 8s ease-in-out infinite;
+        filter: blur(20px);
+    }
+
+    .ai-service-panel:hover .morph-bg {
+        @apply opacity-20;
+        animation-duration: 4s;
+    }
+
+    /* Data Flow Lines */
+    .data-flow-line {
+        @apply absolute h-px bg-gradient-to-r from-transparent via-primary-300 to-transparent opacity-0 transition-opacity duration-500;
+    }
+
+    .data-flow-line.horizontal {
+        @apply w-full top-1/2;
+    }
+
+    .data-flow-line.vertical {
+        @apply h-full w-px left-1/2 top-0;
+        background: linear-gradient(to bottom, transparent, rgba(94, 224, 229, 0.6), transparent);
+    }
+
+    .ai-service-panel:hover .data-flow-line {
+        @apply opacity-100;
+        animation: data-flow 3s ease-in-out infinite;
+    }
+
+    /* Service Panel Grid Enhancements */
+    .service-grid-container {
+        @apply relative;
+    }
+
+    .service-grid-container::before {
+        content: '';
+        position: absolute;
+        inset: 0;
         background-image:
-            radial-gradient(circle at 25% 25%, rgba(14, 165, 233, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 75% 75%, rgba(244, 63, 94, 0.1) 0%, transparent 50%);
+            linear-gradient(rgba(94, 224, 229, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(94, 224, 229, 0.03) 1px, transparent 1px);
+        background-size: 50px 50px;
+        pointer-events: none;
+        animation: circuit 20s linear infinite;
+    }
+
+    /* Enhanced Section Styling */
+    .section-padding {
+        @apply py-24 px-4 sm:px-6 lg:px-8;
+    }
+
+    .neural-bg {
+        background-image:
+            radial-gradient(circle at 25% 25%, rgba(94, 224, 229, 0.05) 0%, transparent 50%),
+            radial-gradient(circle at 75% 75%, rgba(168, 85, 247, 0.05) 0%, transparent 50%);
+    }
+
+    .ai-grid {
+        background-image:
+            linear-gradient(rgba(94, 224, 229, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(94, 224, 229, 0.1) 1px, transparent 1px);
+        background-size: 50px 50px;
+    }
+
+    /* Parallax Floating Elements */
+    .parallax-element {
+        @apply absolute pointer-events-none;
+        will-change: transform;
+    }
+
+    .floating-particle-1 {
+        @apply w-2 h-2 bg-primary-300/30 rounded-full;
+        animation: float 8s ease-in-out infinite;
+    }
+
+    .floating-particle-2 {
+        @apply w-3 h-3 border border-electric-400/40 rounded-full;
+        animation: float-delayed 10s ease-in-out infinite;
+    }
+
+    .floating-particle-3 {
+        @apply w-4 h-4 bg-gradient-to-r from-primary-300/20 to-electric-400/20 rounded-lg;
+        animation: float-slow 12s ease-in-out infinite;
+    }
+
+    /* Circuit Lines */
+    .circuit-lines {
+        position: relative;
+    }
+
+    .circuit-lines::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(94, 224, 229, 0.5), transparent);
+        animation: circuit 3s linear infinite;
+    }
+
+    .team-carousel-card {
+        @apply bg-black/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 transition-all duration-500 hover:border-primary-300/50 hover:shadow-lg hover:shadow-primary-300/20;
+    }
+
+    /* Modal Enhancements */
+    .ai-modal {
+        @apply bg-black/95 backdrop-blur-lg border border-gray-800/50 rounded-3xl relative overflow-hidden;
+        background-image: radial-gradient(circle at 30% 20%, rgba(94, 224, 229, 0.05) 0%, transparent 50%);
+    }
+
+    .ai-modal::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(94, 224, 229, 0.6), transparent);
+    }
+
+    /* Advanced Typography */
+    .ai-heading {
+        @apply font-logo font-bold tracking-tight;
+        background: linear-gradient(135deg, #5ee0e5 0%, #a855f7 50%, #0ea5e9 100%);
+        background-size: 200% 200%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradient-shift 3s ease infinite;
+    }
+
+    @keyframes gradient-shift {
+
+        0%,
+        100% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+    }
+
+    /* Scrollbar styling for AI theme */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #000;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, rgba(94, 224, 229, 0.5), rgba(168, 85, 247, 0.5));
+        border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, rgba(94, 224, 229, 0.8), rgba(168, 85, 247, 0.8));
     }
 }

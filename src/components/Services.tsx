@@ -1,245 +1,483 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import {
-  Users,
-  Headphones,
-  Code2,
-  Target,
-  Globe2,
-  Settings,
+  Brain,
+  Stethoscope,
+  Database,
+  Calculator,
+  Workflow,
+  Globe,
+  Code,
   CheckCircle,
   ArrowRight,
-  Heart,
   Zap,
   Shield,
+  Target,
+  ChevronRight,
+  X,
+  Cpu,
+  Network,
+  Activity,
+  BarChart3,
 } from "lucide-react";
 
 const Services = () => {
+  const [selectedService, setSelectedService] = useState<number | null>(null);
+  const [hoveredService, setHoveredService] = useState<number | null>(null);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   const services = [
     {
-      icon: Headphones,
-      title: "Customer Support Outsourcing",
+      icon: Brain,
+      title: "AI Automation",
+      shortDescription: "Intelligent process automation",
       description:
-        "Dedicated Filipino professionals providing exceptional customer service with cultural understanding and English proficiency.",
+        "Revolutionary AI-driven automation solutions that transform manual workflows into intelligent, self-optimizing systems using advanced machine learning algorithms.",
       features: [
-        "24/7 Support Coverage",
-        "Multi-channel Support",
-        "CRM Integration",
-        "Quality Assurance",
+        "Neural Process Optimization",
+        "Machine Learning Integration",
+        "Predictive Decision Making",
+        "Real-time Analytics Dashboard",
+        "Automated Quality Control",
+        "Smart Resource Allocation",
       ],
+      benefits:
+        "Reduce operational costs by up to 70% while increasing productivity and accuracy",
+      color: "primary",
+      connections: [1, 4],
     },
     {
-      icon: Code2,
-      title: "Technical Development",
+      icon: Stethoscope,
+      title: "Healthcare AI Billing",
+      shortDescription: "AI-enhanced medical billing",
       description:
-        "Expert software engineers and developers from the Philippines delivering high-quality web and mobile applications.",
+        "Cutting-edge AI-powered medical billing platform with intelligent claim processing, fraud detection, and automated compliance management for healthcare providers.",
       features: [
-        "Full-stack Development",
-        "Mobile App Development",
-        "DevOps & Cloud",
-        "Quality Testing",
+        "AI Claims Processing",
+        "Automated Insurance Verification",
+        "Intelligent Revenue Optimization",
+        "Compliance Monitoring System",
+        "Predictive Denial Management",
+        "Real-time Payment Tracking",
       ],
+      benefits:
+        "Improve billing accuracy by 95% and reduce processing time by 60%",
+      color: "electric",
+      connections: [2, 3],
     },
     {
-      icon: Users,
-      title: "Virtual Assistant Services",
+      icon: Database,
+      title: "Intelligent Data Management",
+      shortDescription: "AI-powered data processing",
       description:
-        "Skilled virtual assistants to handle administrative tasks, allowing you to focus on core business activities.",
+        "Advanced data management ecosystem powered by AI validation, smart categorization, and intelligent quality control systems ensuring 99.9% accuracy.",
       features: [
-        "Administrative Support",
-        "Data Entry & Research",
-        "Social Media Management",
-        "Project Coordination",
+        "AI-Powered Data Validation",
+        "Smart Pattern Recognition",
+        "Automated Quality Assurance",
+        "Intelligent Data Categorization",
+        "Secure Cloud Processing",
+        "Real-time Error Detection",
       ],
+      benefits: "Achieve 99.9% accuracy with 5x faster processing speeds",
+      color: "accent",
+      connections: [1, 4, 5],
     },
     {
-      icon: Target,
-      title: "Digital Marketing",
+      icon: Calculator,
+      title: "AI Financial Analytics",
+      shortDescription: "Intelligent financial management",
       description:
-        "Strategic digital marketing professionals to boost your online presence and drive sustainable growth.",
+        "Comprehensive AI-driven financial management platform with predictive analytics, automated reconciliation, and intelligent forecasting capabilities.",
       features: [
-        "SEO & Content Marketing",
-        "Social Media Strategy",
-        "PPC Management",
-        "Analytics & Reporting",
+        "Predictive Financial Modeling",
+        "Automated Reconciliation",
+        "AI Tax Optimization",
+        "Smart Cash Flow Analysis",
+        "Intelligent Risk Assessment",
+        "Real-time Financial Insights",
       ],
+      benefits:
+        "Real-time financial intelligence with 40% improved forecasting accuracy",
+      color: "primary",
+      connections: [1, 2],
     },
     {
-      icon: Settings,
-      title: "Business Process Outsourcing",
+      icon: Workflow,
+      title: "Neural Workflow Engine",
+      shortDescription: "AI workflow orchestration",
       description:
-        "Comprehensive BPO solutions tailored to streamline your operations and increase efficiency.",
+        "Next-generation workflow automation platform that learns, adapts, and optimizes business processes using neural network technologies.",
       features: [
-        "Process Optimization",
-        "Finance & Accounting",
-        "HR Administration",
-        "Supply Chain Support",
+        "Self-Learning Workflows",
+        "Adaptive Process Optimization",
+        "Intelligent Integration Hub",
+        "Predictive Performance Monitoring",
+        "Smart Resource Management",
+        "Automated Bottleneck Resolution",
       ],
+      benefits:
+        "Streamline operations with 80% reduction in manual intervention",
+      color: "electric",
+      connections: [0, 2, 6],
     },
     {
-      icon: Globe2,
-      title: "Remote Team Integration",
+      icon: Globe,
+      title: "AI-Driven Web Platforms",
+      shortDescription: "Intelligent web solutions",
       description:
-        "Seamlessly integrate Filipino talent into your existing teams with our proven remote work methodologies.",
+        "Revolutionary web applications infused with AI capabilities, featuring adaptive user experiences, intelligent content optimization, and predictive performance enhancement.",
       features: [
-        "Team Onboarding",
-        "Communication Tools",
-        "Performance Monitoring",
-        "Cultural Integration",
+        "Adaptive User Interfaces",
+        "AI Content Optimization",
+        "Predictive Performance Scaling",
+        "Intelligent SEO Enhancement",
+        "Smart User Analytics",
+        "Automated A/B Testing",
       ],
+      benefits: "Enhanced user engagement with 50% improved conversion rates",
+      color: "accent",
+      connections: [2, 4, 6],
+    },
+    {
+      icon: Code,
+      title: "AI Software Architecture",
+      shortDescription: "Intelligent software solutions",
+      description:
+        "Enterprise-grade software solutions built with embedded AI intelligence, featuring self-healing code, predictive maintenance, and adaptive functionality.",
+      features: [
+        "Self-Healing Code Architecture",
+        "Predictive System Maintenance",
+        "AI-Enhanced Security",
+        "Intelligent Performance Optimization",
+        "Adaptive Feature Evolution",
+        "Smart Documentation Generation",
+      ],
+      benefits:
+        "Enterprise resilience with 99.9% uptime and predictive issue resolution",
+      color: "primary",
+      connections: [4, 5],
     },
   ];
+
+  const getColorClasses = (color: string) => {
+    switch (color) {
+      case "primary":
+        return {
+          icon: "text-primary-300",
+          border: "border-primary-300/50",
+          glow: "shadow-primary-300/20",
+          bg: "bg-primary-300/10",
+          accent: "primary-300",
+        };
+      case "electric":
+        return {
+          icon: "text-electric-400",
+          border: "border-electric-400/50",
+          glow: "shadow-electric-400/20",
+          bg: "bg-electric-400/10",
+          accent: "electric-400",
+        };
+      case "accent":
+        return {
+          icon: "text-accent-400",
+          border: "border-accent-400/50",
+          glow: "shadow-accent-400/20",
+          bg: "bg-accent-400/10",
+          accent: "accent-400",
+        };
+      default:
+        return {
+          icon: "text-primary-300",
+          border: "border-primary-300/50",
+          glow: "shadow-primary-300/20",
+          bg: "bg-primary-300/10",
+          accent: "primary-300",
+        };
+    }
+  };
+
+  const renderNeuralConnections = (serviceIndex: number) => {
+    const service = services[serviceIndex];
+    return service.connections.map((targetIndex) => (
+      <div
+        key={`${serviceIndex}-${targetIndex}`}
+        className={`neural-connection absolute ${
+          hoveredService === serviceIndex ? "opacity-100" : "opacity-0"
+        }`}
+        style={{
+          top: "50%",
+          left: serviceIndex % 3 < targetIndex % 3 ? "100%" : "0%",
+          width: "50px",
+          transform: "translateY(-50%)",
+        }}
+      />
+    ));
+  };
 
   return (
     <section
       id="services"
-      className="section-padding bg-gradient-to-b from-black to-gray-900 relative overflow-hidden"
+      className="section-padding bg-black relative overflow-hidden"
     >
-      {/* Background Elements */}
+      {/* Advanced Parallax Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-32 h-32 border border-primary-500/20 rounded-xl rotate-12 animate-pulse"></div>
-        <div className="absolute bottom-40 right-20 w-24 h-24 bg-gradient-to-r from-accent-500/10 to-primary-500/10 rounded-full animate-bounce"></div>
-        <div className="absolute top-1/2 left-10 w-2 h-20 bg-gradient-to-b from-primary-400 to-transparent"></div>
-        <div className="absolute top-1/3 right-10 w-2 h-16 bg-gradient-to-b from-accent-400 to-transparent"></div>
+        {/* Particle Field Background */}
+        <div className="absolute inset-0 bg-particle-field opacity-60"></div>
+
+        {/* Floating Parallax Elements */}
+        <div
+          className="parallax-element floating-particle-1 top-20 left-[10%]"
+          style={{
+            transform: `translate(${mousePosition.x * 0.02}px, ${
+              mousePosition.y * 0.02
+            }px)`,
+          }}
+        />
+        <div
+          className="parallax-element floating-particle-2 top-40 right-[20%]"
+          style={{
+            transform: `translate(${mousePosition.x * 0.015}px, ${
+              mousePosition.y * 0.015
+            }px)`,
+          }}
+        />
+        <div
+          className="parallax-element floating-particle-3 bottom-40 left-[30%]"
+          style={{
+            transform: `translate(${mousePosition.x * 0.01}px, ${
+              mousePosition.y * 0.01
+            }px)`,
+          }}
+        />
+        <div
+          className="parallax-element floating-particle-1 bottom-20 right-[15%]"
+          style={{
+            transform: `translate(${mousePosition.x * 0.025}px, ${
+              mousePosition.y * 0.025
+            }px)`,
+          }}
+        />
+
+        {/* Dynamic Circuit Grid */}
+        <div className="absolute inset-0 ai-grid opacity-30"></div>
+
+        {/* Animated Neural Network Lines */}
+        <div className="absolute top-1/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary-300/50 to-transparent animate-data-flow"></div>
+        <div
+          className="absolute bottom-1/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-electric-400/50 to-transparent animate-data-flow"
+          style={{ animationDelay: "1s" }}
+        ></div>
+
+        {/* Morphing Background Elements */}
+        <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-gradient-to-r from-primary-300/5 to-electric-400/5 rounded-full blur-3xl animate-morph"></div>
+        <div
+          className="absolute bottom-1/3 right-1/4 w-48 h-48 bg-gradient-to-r from-electric-400/5 to-accent-400/5 rounded-full blur-3xl animate-morph"
+          style={{ animationDelay: "3s" }}
+        ></div>
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 text-primary-400 mb-4">
-            <div className="w-12 h-0.5 bg-gradient-to-r from-transparent to-primary-500"></div>
-            <span className="text-sm font-medium tracking-wide px-4 py-2 bg-primary-500/10 rounded-full border border-primary-500/30">
-              Our Outsourcing Services
+        {/* Enhanced Section Header */}
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center space-x-2 text-primary-300 mb-6">
+            <div className="w-16 h-0.5 bg-gradient-to-r from-transparent to-primary-300 animate-data-flow"></div>
+            <span className="text-sm font-medium tracking-wide px-6 py-3 bg-primary-300/10 rounded-full border border-primary-300/30 font-logo backdrop-blur-sm">
+              <Cpu className="inline w-4 h-4 mr-2 animate-neural-pulse" />
+              Our Core AI Services
             </span>
-            <div className="w-12 h-0.5 bg-gradient-to-l from-transparent to-primary-500"></div>
+            <div className="w-16 h-0.5 bg-gradient-to-l from-transparent to-primary-300 animate-data-flow"></div>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-            <span className="gradient-text">End-to-End</span>
-            <span className="text-white block">Outsourcing Solutions</span>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 ai-heading">
+            Intelligent Technology Solutions
           </h2>
 
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Leverage skilled professionals at competitive rates with our
-            scalable outsourcing options. Experience top-notch quality from
-            experienced Filipino talent while supporting the growing tech
-            community in Mindanao.
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-logo">
+            Transform your business with our revolutionary AI-enhanced services,
+            designed to automate processes, predict outcomes, and drive
+            intelligent growth across all aspects of your operations.
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, index) => {
-            const IconComponent = service.icon;
-            return (
-              <div
-                key={index}
-                className="card p-8 group hover:scale-105 transition-all duration-300 relative overflow-hidden"
-              >
-                {/* Card Background Effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 via-transparent to-accent-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        {/* Advanced Services Grid */}
+        <div className="service-grid-container mb-20">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => {
+              const IconComponent = service.icon;
+              const colors = getColorClasses(service.color);
 
-                {/* Icon */}
-                <div className="relative w-16 h-16 bg-gradient-to-r from-primary-500/20 to-accent-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 ai-glow">
-                  <IconComponent className="w-8 h-8 text-primary-400 group-hover:text-white transition-colors duration-300" />
+              return (
+                <div
+                  key={index}
+                  className="ai-service-panel group"
+                  onClick={() => setSelectedService(index)}
+                  onMouseEnter={() => setHoveredService(index)}
+                  onMouseLeave={() => setHoveredService(null)}
+                >
+                  {/* Neural Network Connections */}
+                  {renderNeuralConnections(index)}
+
+                  {/* Morphing Background */}
+                  <div className="morph-bg"></div>
+
+                  {/* Particle System */}
+                  <div className="ai-particles">
+                    <div className="particle"></div>
+                    <div className="particle"></div>
+                    <div className="particle"></div>
+                    <div className="particle"></div>
+                    <div className="particle"></div>
+                  </div>
+
+                  {/* Data Flow Lines */}
+                  <div className="data-flow-line horizontal"></div>
+                  <div className="data-flow-line vertical"></div>
+
+                  {/* Enhanced Icon Container */}
+                  <div className="ai-icon-container mb-6 group-hover:scale-110 transition-all duration-500">
+                    <IconComponent
+                      className={`w-10 h-10 ${colors.icon} group-hover:text-white transition-colors duration-500`}
+                    />
+
+                    {/* Rotating Neural Ring */}
+                    <div className="absolute inset-0 border border-primary-300/30 rounded-2xl animate-spin-slow opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                    {/* Pulsing Inner Core */}
+                    <div
+                      className={`absolute inset-2 ${colors.bg} rounded-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500 animate-neural-pulse`}
+                    ></div>
+                  </div>
+
+                  {/* Content with Enhanced Typography */}
+                  <div className="relative z-10">
+                    <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-primary-300 transition-colors duration-500 font-logo">
+                      {service.title}
+                    </h3>
+
+                    <p className="text-primary-300/80 text-sm mb-4 font-logo font-medium">
+                      {service.shortDescription}
+                    </p>
+
+                    <p className="text-gray-300 mb-6 leading-relaxed font-logo">
+                      {service.description.substring(0, 120)}...
+                    </p>
+
+                    {/* Enhanced Features Preview */}
+                    <ul className="space-y-2 mb-6">
+                      {service.features
+                        .slice(0, 3)
+                        .map((feature, featureIndex) => (
+                          <li
+                            key={featureIndex}
+                            className="flex items-center space-x-3 group/item"
+                          >
+                            <div
+                              className={`w-1.5 h-1.5 ${colors.bg} rounded-full flex-shrink-0 group-hover/item:animate-pulse`}
+                            ></div>
+                            <span className="text-sm text-gray-300 font-logo group-hover/item:text-gray-200 transition-colors duration-300">
+                              {feature}
+                            </span>
+                          </li>
+                        ))}
+                      <li className="flex items-center space-x-3 text-xs text-primary-300/60 font-logo">
+                        <span>
+                          +{service.features.length - 3} more features
+                        </span>
+                      </li>
+                    </ul>
+
+                    {/* Interactive CTA */}
+                    <button className="flex items-center space-x-2 text-primary-300 hover:text-white font-medium group/cta transition-all duration-300 font-logo">
+                      <span>Explore Technology</span>
+                      <div className="relative">
+                        <ChevronRight className="w-4 h-4 group-hover/cta:translate-x-1 transition-transform duration-300" />
+                        <div className="absolute inset-0 bg-primary-300 rounded-full opacity-0 group-hover/cta:opacity-20 group-hover/cta:animate-ping transition-opacity duration-300"></div>
+                      </div>
+                    </button>
+                  </div>
+
+                  {/* Advanced Hover Effects */}
+                  <div className="absolute inset-0 pointer-events-none">
+                    {/* Scanning Line Effect */}
+                    <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary-300 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-data-flow transition-opacity duration-500"></div>
+
+                    {/* Corner Accent Lines */}
+                    <div className="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-primary-300/0 group-hover:border-primary-300/60 transition-colors duration-500"></div>
+                    <div className="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-primary-300/0 group-hover:border-primary-300/60 transition-colors duration-500"></div>
+                    <div className="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-primary-300/0 group-hover:border-primary-300/60 transition-colors duration-500"></div>
+                    <div className="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-primary-300/0 group-hover:border-primary-300/60 transition-colors duration-500"></div>
+                  </div>
                 </div>
-
-                {/* Content */}
-                <h3 className="text-xl font-bold mb-4 text-white group-hover:text-primary-300 transition-colors duration-300">
-                  {service.title}
-                </h3>
-
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  {service.description}
-                </p>
-
-                {/* Features List */}
-                <ul className="space-y-3 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <li
-                      key={featureIndex}
-                      className="flex items-center space-x-3"
-                    >
-                      <CheckCircle className="w-4 h-4 text-primary-400 flex-shrink-0" />
-                      <span className="text-sm text-gray-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Learn More Link */}
-                <button className="flex items-center space-x-2 text-primary-400 hover:text-primary-300 font-medium group/link transition-colors duration-300">
-                  <span>Learn More</span>
-                  <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                </button>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
 
-        {/* Value Proposition */}
-        <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-3xl p-8 lg:p-12 border border-gray-700 ai-glow relative overflow-hidden">
-          {/* Background Pattern */}
-          <div className="absolute inset-0 opacity-5">
-            <div
-              className="absolute inset-0"
-              style={{
-                backgroundImage: `
-                linear-gradient(45deg, rgba(14, 165, 233, 0.1) 1px, transparent 1px),
-                linear-gradient(-45deg, rgba(244, 63, 94, 0.1) 1px, transparent 1px)
-              `,
-                backgroundSize: "20px 20px",
-              }}
-            ></div>
-          </div>
+        {/* Enhanced AI Innovation Section */}
+        <div className="bg-gradient-to-r from-black via-gray-900/30 to-black rounded-3xl p-12 border border-gray-800 ai-glow relative overflow-hidden">
+          {/* Animated Background Pattern */}
+          <div className="absolute inset-0 neural-bg opacity-40"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-300/5 via-transparent to-electric-400/5 animate-circuit"></div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
             <div>
-              <h3 className="text-2xl lg:text-3xl font-bold mb-6 gradient-text">
-                Why Choose Nyxpro for Outsourcing?
+              <h3 className="text-3xl lg:text-4xl font-bold mb-8 ai-heading">
+                Why Choose Nyxpro AI Agency?
               </h3>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Heart className="w-4 h-4 text-white" />
+              <div className="space-y-8">
+                <div className="flex items-start space-x-6">
+                  <div className="ai-icon-container !w-12 !h-12">
+                    <Brain className="w-6 h-6 text-primary-300" />
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-2 text-white">
-                      Filipino Excellence
+                    <h4 className="font-semibold mb-3 text-white font-logo text-lg">
+                      Neural Intelligence First
                     </h4>
-                    <p className="text-gray-300">
-                      Tap into the renowned focus, discipline, and English
-                      proficiency of Filipino professionals who deliver
-                      innovative, tailor-made solutions.
+                    <p className="text-gray-300 font-logo leading-relaxed">
+                      Every solution is architected with deep learning
+                      algorithms at its core, ensuring maximum efficiency and
+                      predictive capabilities that evolve with your business.
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-accent-500 to-accent-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Zap className="w-4 h-4 text-white" />
+                <div className="flex items-start space-x-6">
+                  <div className="ai-icon-container !w-12 !h-12">
+                    <Zap className="w-6 h-6 text-electric-400" />
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-2 text-white">
-                      Cost-Effective Growth
+                    <h4 className="font-semibold mb-3 text-white font-logo text-lg">
+                      Quantum-Speed Implementation
                     </h4>
-                    <p className="text-gray-300">
-                      Achieve up to 70% cost savings while accessing top-tier
-                      talent that scales with your business needs and
-                      requirements.
+                    <p className="text-gray-300 font-logo leading-relaxed">
+                      Our AI-accelerated development process reduces
+                      implementation time by 60% while maintaining
+                      enterprise-grade security and performance standards.
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-primary-400 to-accent-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Shield className="w-4 h-4 text-white" />
+                <div className="flex items-start space-x-6">
+                  <div className="ai-icon-container !w-12 !h-12">
+                    <Shield className="w-6 h-6 text-accent-400" />
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-2 text-white">
-                      Local Impact
+                    <h4 className="font-semibold mb-3 text-white font-logo text-lg">
+                      Fortress-Level Security
                     </h4>
-                    <p className="text-gray-300">
-                      Support the growing tech community in Mindanao while
-                      enhancing your corporate social responsibility
-                      initiatives.
+                    <p className="text-gray-300 font-logo leading-relaxed">
+                      Military-grade security with AI-powered threat prediction
+                      and quantum-resistant encryption ensuring complete data
+                      sovereignty.
                     </p>
                   </div>
                 </div>
@@ -247,59 +485,164 @@ const Services = () => {
             </div>
 
             <div className="text-center lg:text-left">
-              <div className="grid grid-cols-2 gap-8 mb-8">
-                <div className="p-4 bg-gray-900/50 rounded-xl border border-gray-700">
-                  <div className="text-3xl font-bold gradient-text mb-2">
-                    70%
+              <div className="grid grid-cols-2 gap-6 mb-10">
+                <div className="p-8 bg-black/60 rounded-2xl border border-gray-800 hover:border-primary-300/50 transition-all duration-500 group">
+                  <div className="flex items-center justify-center mb-4">
+                    <Activity className="w-8 h-8 text-primary-300 group-hover:animate-pulse" />
                   </div>
-                  <div className="text-gray-300 text-sm">Cost Reduction</div>
-                </div>
-                <div className="p-4 bg-gray-900/50 rounded-xl border border-gray-700">
-                  <div className="text-3xl font-bold gradient-text mb-2">
-                    24/7
+                  <div className="text-4xl font-bold ai-heading mb-2">
+                    99.9%
                   </div>
-                  <div className="text-gray-300 text-sm">Support Coverage</div>
-                </div>
-                <div className="p-4 bg-gray-900/50 rounded-xl border border-gray-700">
-                  <div className="text-3xl font-bold gradient-text mb-2">
-                    500+
-                  </div>
-                  <div className="text-gray-300 text-sm">
-                    Projects Delivered
+                  <div className="text-gray-300 text-sm font-logo">
+                    Neural Uptime
                   </div>
                 </div>
-                <div className="p-4 bg-gray-900/50 rounded-xl border border-gray-700">
-                  <div className="text-3xl font-bold gradient-text mb-2">
-                    98%
+                <div className="p-8 bg-black/60 rounded-2xl border border-gray-800 hover:border-electric-400/50 transition-all duration-500 group">
+                  <div className="flex items-center justify-center mb-4">
+                    <Network className="w-8 h-8 text-electric-400 group-hover:animate-spin-slow" />
                   </div>
-                  <div className="text-gray-300 text-sm">
-                    Client Satisfaction
+                  <div className="text-4xl font-bold ai-heading mb-2">60%</div>
+                  <div className="text-gray-300 text-sm font-logo">
+                    Faster Deployment
+                  </div>
+                </div>
+                <div className="p-8 bg-black/60 rounded-2xl border border-gray-800 hover:border-accent-400/50 transition-all duration-500 group">
+                  <div className="flex items-center justify-center mb-4">
+                    <BarChart3 className="w-8 h-8 text-accent-400 group-hover:animate-bounce-slow" />
+                  </div>
+                  <div className="text-4xl font-bold ai-heading mb-2">24/7</div>
+                  <div className="text-gray-300 text-sm font-logo">
+                    AI Monitoring
+                  </div>
+                </div>
+                <div className="p-8 bg-black/60 rounded-2xl border border-gray-800 hover:border-primary-300/50 transition-all duration-500 group">
+                  <div className="flex items-center justify-center mb-4">
+                    <Cpu className="w-8 h-8 text-primary-300 group-hover:animate-glow" />
+                  </div>
+                  <div className="text-4xl font-bold ai-heading mb-2">500+</div>
+                  <div className="text-gray-300 text-sm font-logo">
+                    AI Models Active
                   </div>
                 </div>
               </div>
 
-              <button className="btn-primary w-full lg:w-auto group">
-                Start Your Outsourcing Journey
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <button className="btn-primary w-full lg:w-auto group font-logo text-lg px-8 py-4">
+                Initialize AI Partnership
+                <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
               </button>
             </div>
           </div>
         </div>
-
-        {/* Remote Work Model Highlight */}
-        <div className="mt-16 text-center p-8 bg-gradient-to-r from-primary-500/10 via-accent-500/10 to-primary-500/10 rounded-2xl border border-primary-500/20">
-          <Globe2 className="w-16 h-16 text-primary-400 mx-auto mb-4" />
-          <h3 className="text-2xl font-bold mb-4 text-white">
-            Fully Remote Work Model
-          </h3>
-          <p className="text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            We prioritize communication, productivity, and teamwork with the
-            right tools and support. Our remote-first approach ensures seamless
-            collaboration across time zones while maintaining the highest
-            standards of quality and efficiency.
-          </p>
-        </div>
       </div>
+
+      {/* Enhanced Service Detail Modal */}
+      {selectedService !== null && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-lg p-4">
+          <div className="ai-modal shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto">
+            {/* Enhanced Header */}
+            <div className="flex items-center justify-between p-8 border-b border-gray-800/50">
+              <div className="flex items-center space-x-4">
+                <div className="ai-icon-container !w-16 !h-16">
+                  {(() => {
+                    const IconComponent = services[selectedService].icon;
+                    const colors = getColorClasses(
+                      services[selectedService].color
+                    );
+                    return (
+                      <IconComponent className={`w-8 h-8 ${colors.icon}`} />
+                    );
+                  })()}
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white font-logo">
+                    {services[selectedService].title}
+                  </h3>
+                  <p className="text-primary-300/80 font-logo">
+                    {services[selectedService].shortDescription}
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={() => setSelectedService(null)}
+                className="p-3 hover:bg-gray-800 rounded-xl transition-colors group"
+                aria-label="Close modal"
+              >
+                <X className="w-6 h-6 text-gray-400 group-hover:text-white" />
+              </button>
+            </div>
+
+            {/* Enhanced Content */}
+            <div className="p-8">
+              <p className="text-gray-300 mb-8 leading-relaxed text-lg font-logo">
+                {services[selectedService].description}
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                  <h4 className="text-xl font-semibold mb-6 text-white font-logo flex items-center">
+                    <Cpu className="w-5 h-5 mr-3 text-primary-300" />
+                    Core Capabilities
+                  </h4>
+                  <div className="space-y-3">
+                    {services[selectedService].features.map(
+                      (feature, index) => (
+                        <div
+                          key={index}
+                          className="flex items-center space-x-3 group"
+                        >
+                          <div className="w-2 h-2 bg-primary-300 rounded-full flex-shrink-0 group-hover:animate-pulse"></div>
+                          <span className="text-gray-300 font-logo group-hover:text-gray-200 transition-colors">
+                            {feature}
+                          </span>
+                        </div>
+                      )
+                    )}
+                  </div>
+                </div>
+
+                <div className="space-y-6">
+                  <div className="p-6 bg-primary-300/10 rounded-2xl border border-primary-300/30">
+                    <h4 className="font-semibold text-primary-300 mb-3 font-logo flex items-center">
+                      <Target className="w-5 h-5 mr-2" />
+                      Expected Outcomes
+                    </h4>
+                    <p className="text-gray-300 font-logo leading-relaxed">
+                      {services[selectedService].benefits}
+                    </p>
+                  </div>
+
+                  <div className="p-6 bg-electric-400/10 rounded-2xl border border-electric-400/30">
+                    <h4 className="font-semibold text-electric-400 mb-3 font-logo flex items-center">
+                      <Activity className="w-5 h-5 mr-2" />
+                      Implementation Timeline
+                    </h4>
+                    <p className="text-gray-300 font-logo">
+                      Rapid deployment in 2-4 weeks with continuous AI
+                      optimization
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button
+                  className="btn-primary flex-1 group font-logo"
+                  onClick={() => setSelectedService(null)}
+                >
+                  Initialize This Solution
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </button>
+                <button
+                  className="btn-secondary flex-1 font-logo"
+                  onClick={() => setSelectedService(null)}
+                >
+                  Schedule AI Consultation
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

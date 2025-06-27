@@ -3,12 +3,12 @@ import { AuthProvider } from "@/components/AuthProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Nyxpro - Business Solutions & Innovation",
+  title: "Nyxpro - AI Agency & IT Consulting",
   description:
-    "Nyxpro provides cutting-edge business solutions and innovative services to help your company thrive in the digital age.",
+    "Nyxpro is a cutting-edge AI agency specializing in IT consulting, software development, and intelligent automation solutions to transform your business.",
   keywords:
-    "business solutions, innovation, technology, consulting, digital transformation",
-  authors: [{ name: "Nyxpro Team" }],
+    "AI agency, IT consulting, software development, AI automation, artificial intelligence, machine learning, digital transformation",
+  authors: [{ name: "Nyxpro AI Team" }],
 };
 
 export const viewport = {
@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="bg-black text-white antialiased geometric-bg">
+      <body className="bg-black text-white antialiased neural-bg">
         <AuthProvider>{children}</AuthProvider>
       </body>
     </html>

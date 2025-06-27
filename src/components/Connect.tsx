@@ -1,363 +1,506 @@
 "use client";
 
+import { useState } from "react";
 import {
-  Facebook,
-  Linkedin,
   Mail,
   Phone,
   MapPin,
   Send,
-  MessageCircle,
+  CheckCircle,
+  Brain,
+  Zap,
+  Shield,
   Clock,
-  Users,
+  MessageSquare,
+  User,
+  Building,
+  Briefcase,
+  ChevronDown,
+  Facebook,
+  Linkedin,
+  Activity,
+  BarChart3,
+  Cpu,
 } from "lucide-react";
 
 const Connect = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    phone: "",
+    service: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Simulate form submission
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
+    setSubmitted(true);
+    setIsSubmitting(false);
+
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setSubmitted(false);
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        phone: "",
+        service: "",
+        message: "",
+      });
+    }, 3000);
+  };
+
+  const aiServices = [
+    "AI Automation Solutions",
+    "Healthcare AI Billing",
+    "Intelligent Data Management",
+    "AI Financial Analytics",
+    "Neural Workflow Engine",
+    "AI-Driven Web Platforms",
+    "AI Software Architecture",
+    "Custom AI Consultation",
+  ];
+
+  const contactInfo = [
+    {
+      icon: Mail,
+      label: "AI Command Center",
+      value: "hello@nyxpro.us",
+      description: "Neural network-powered support",
+    },
+    {
+      icon: Phone,
+      label: "Direct Neural Link",
+      value: "+1 (555) AI-NYXPRO",
+      description: "24/7 intelligent assistance",
+    },
+    {
+      icon: MapPin,
+      label: "AI Innovation Hub",
+      value: "Digital Transformation Center",
+      description: "Global AI operations base",
+    },
+  ];
+
+  const aiStats = [
+    {
+      icon: Activity,
+      value: "99.9%",
+      label: "Neural Uptime",
+      color: "primary",
+    },
+    {
+      icon: BarChart3,
+      value: "24/7",
+      label: "AI Monitoring",
+      color: "electric",
+    },
+    { icon: Cpu, value: "500+", label: "Active Models", color: "accent" },
+    { icon: Brain, value: "< 1ms", label: "Response Time", color: "primary" },
+  ];
+
+  const getStatColor = (color: string) => {
+    switch (color) {
+      case "primary":
+        return "text-primary-300 bg-primary-300/10 border-primary-300/30";
+      case "electric":
+        return "text-electric-400 bg-electric-400/10 border-electric-400/30";
+      case "accent":
+        return "text-accent-400 bg-accent-400/10 border-accent-400/30";
+      default:
+        return "text-primary-300 bg-primary-300/10 border-primary-300/30";
+    }
+  };
+
   return (
     <section
       id="connect"
-      className="section-padding bg-gradient-to-b from-black to-gray-900 relative overflow-hidden"
+      className="section-padding bg-black relative overflow-hidden"
     >
-      {/* Background Elements */}
+      {/* AI Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-36 h-36 border border-primary-500/20 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-28 h-28 bg-gradient-to-r from-accent-500/10 to-primary-500/10 rounded-xl rotate-12 animate-bounce"></div>
-        <div className="absolute top-1/2 right-10 w-3 h-28 bg-gradient-to-b from-accent-400 to-transparent"></div>
-        <div className="absolute bottom-1/3 left-10 w-2 h-24 bg-gradient-to-b from-primary-400 to-transparent"></div>
+        <div className="absolute inset-0 neural-bg opacity-20"></div>
+        <div className="absolute inset-0 ai-grid opacity-30"></div>
+
+        {/* Floating AI Particles */}
+        <div className="absolute top-20 left-10 w-12 h-12 border border-primary-300/20 rounded-lg rotate-45 animate-float"></div>
+        <div className="absolute bottom-32 right-20 w-16 h-16 bg-gradient-to-r from-electric-400/20 to-primary-300/20 rounded-full animate-pulse-slow"></div>
+        <div className="absolute top-1/2 right-10 w-8 h-8 bg-accent-400/30 rounded-xl animate-spin-slow"></div>
+
+        {/* Neural Network Lines */}
+        <div className="absolute top-1/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary-300/40 to-transparent animate-data-flow"></div>
+        <div
+          className="absolute bottom-1/3 left-0 right-0 h-px bg-gradient-to-r from-transparent via-electric-400/40 to-transparent animate-data-flow"
+          style={{ animationDelay: "1.5s" }}
+        ></div>
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 text-primary-400 mb-4">
-            <div className="w-12 h-0.5 bg-gradient-to-r from-transparent to-primary-500"></div>
-            <span className="text-sm font-medium tracking-wide px-4 py-2 bg-primary-500/10 rounded-full border border-primary-500/30">
-              Connect With Nyxpro
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center space-x-2 text-primary-300 mb-6">
+            <div className="w-12 h-0.5 bg-gradient-to-r from-transparent to-primary-300"></div>
+            <span className="text-sm font-medium tracking-wide px-4 py-2 bg-primary-300/10 rounded-full border border-primary-300/30 font-logo">
+              <MessageSquare className="inline w-4 h-4 mr-2" />
+              Connect with AI Experts
             </span>
-            <div className="w-12 h-0.5 bg-gradient-to-l from-transparent to-primary-500"></div>
+            <div className="w-12 h-0.5 bg-gradient-to-l from-transparent to-primary-300"></div>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-            Ready to <span className="gradient-text">Scale Your Business</span>
-            <span className="text-white block">with Filipino Excellence?</span>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 ai-heading">
+            Initialize AI Transformation
           </h2>
 
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Connect with us today to discover how Nyxpro can help you achieve
-            your outsourcing goals. Let's discuss your business needs and create
-            a tailored solution that drives growth and reduces costs.
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-logo">
+            Ready to revolutionize your business with intelligent AI solutions?
+            Connect with our neural network experts and begin your journey
+            toward unprecedented efficiency and growth.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Left Side - Contact Info & Social */}
+        <div className="grid lg:grid-cols-2 gap-16">
+          {/* Contact Form */}
           <div className="space-y-8">
-            {/* Social Media Section */}
-            <div className="card p-8 relative overflow-hidden">
-              {/* Background Effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 via-transparent to-accent-500/5"></div>
-
-              <div className="relative z-10">
-                <h3 className="text-2xl font-bold mb-6 text-white">
-                  Follow Our Journey
+            <div className="ai-panel">
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold mb-4 text-white font-logo">
+                  Start Your AI Journey
                 </h3>
-
-                <p className="text-gray-300 mb-8 leading-relaxed">
-                  Stay connected with Nyxpro and join our community of
-                  successful businesses leveraging Filipino talent. Get
-                  insights, updates, and success stories from our outsourcing
-                  partnership network.
+                <p className="text-gray-300 font-logo">
+                  Tell us about your project and let our AI specialists design
+                  the perfect intelligent solution for your needs.
                 </p>
+              </div>
 
-                {/* Social Media Links */}
-                <div className="space-y-4">
+              {submitted ? (
+                <div className="text-center py-12">
+                  <div className="ai-icon-container mx-auto mb-6 animate-scale-in">
+                    <CheckCircle className="w-12 h-12 text-primary-300" />
+                  </div>
+                  <h4 className="text-2xl font-bold text-white mb-4 font-logo">
+                    Neural Link Established!
+                  </h4>
+                  <p className="text-gray-300 font-logo">
+                    Your message has been processed by our AI systems. Expect a
+                    response within 24 hours from our expert team.
+                  </p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="relative">
+                      <label className="block text-sm font-medium text-gray-300 mb-2 font-logo">
+                        <User className="inline w-4 h-4 mr-2" />
+                        Full Name
+                      </label>
+                      <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg focus:border-primary-300 focus:ring-1 focus:ring-primary-300 text-white placeholder-gray-400 transition-all duration-300 font-logo"
+                        placeholder="Enter your full name"
+                      />
+                      <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary-300/10 to-electric-400/10 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                    </div>
+
+                    <div className="relative">
+                      <label className="block text-sm font-medium text-gray-300 mb-2 font-logo">
+                        <Mail className="inline w-4 h-4 mr-2" />
+                        Email Address
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg focus:border-primary-300 focus:ring-1 focus:ring-primary-300 text-white placeholder-gray-400 transition-all duration-300 font-logo"
+                        placeholder="your.email@company.com"
+                      />
+                      <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary-300/10 to-electric-400/10 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                    </div>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="relative">
+                      <label className="block text-sm font-medium text-gray-300 mb-2 font-logo">
+                        <Building className="inline w-4 h-4 mr-2" />
+                        Company Name
+                      </label>
+                      <input
+                        type="text"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg focus:border-primary-300 focus:ring-1 focus:ring-primary-300 text-white placeholder-gray-400 transition-all duration-300 font-logo"
+                        placeholder="Your company name"
+                      />
+                      <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary-300/10 to-electric-400/10 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                    </div>
+
+                    <div className="relative">
+                      <label className="block text-sm font-medium text-gray-300 mb-2 font-logo">
+                        <Phone className="inline w-4 h-4 mr-2" />
+                        Phone Number
+                      </label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg focus:border-primary-300 focus:ring-1 focus:ring-primary-300 text-white placeholder-gray-400 transition-all duration-300 font-logo"
+                        placeholder="+1 (555) 123-4567"
+                      />
+                      <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary-300/10 to-electric-400/10 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                    </div>
+                  </div>
+
+                  <div className="relative">
+                    <label className="block text-sm font-medium text-gray-300 mb-2 font-logo">
+                      <Briefcase className="inline w-4 h-4 mr-2" />
+                      AI Service Interest
+                    </label>
+                    <div className="relative">
+                      <select
+                        name="service"
+                        value={formData.service}
+                        onChange={handleInputChange}
+                        required
+                        title="Select the AI service you are interested in"
+                        className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg focus:border-primary-300 focus:ring-1 focus:ring-primary-300 text-white appearance-none transition-all duration-300 font-logo"
+                      >
+                        <option value="" className="font-logo">
+                          Select an AI service...
+                        </option>
+                        {aiServices.map((service, index) => (
+                          <option
+                            key={index}
+                            value={service}
+                            className="font-logo"
+                          >
+                            {service}
+                          </option>
+                        ))}
+                      </select>
+                      <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
+                    </div>
+                    <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary-300/10 to-electric-400/10 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                  </div>
+
+                  <div className="relative">
+                    <label className="block text-sm font-medium text-gray-300 mb-2 font-logo">
+                      <MessageSquare className="inline w-4 h-4 mr-2" />
+                      Project Details
+                    </label>
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      required
+                      rows={6}
+                      className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg focus:border-primary-300 focus:ring-1 focus:ring-primary-300 text-white placeholder-gray-400 resize-none transition-all duration-300 font-logo"
+                      placeholder="Describe your AI transformation goals, current challenges, and how our intelligent solutions can help your business..."
+                    />
+                    <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary-300/10 to-electric-400/10 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full btn-primary group relative overflow-hidden font-logo text-lg py-4"
+                  >
+                    <span className="relative z-10 flex items-center justify-center">
+                      {isSubmitting ? (
+                        <>
+                          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-current mr-3"></div>
+                          Processing Neural Data...
+                        </>
+                      ) : (
+                        <>
+                          Initialize AI Partnership
+                          <Send className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                        </>
+                      )}
+                    </span>
+
+                    {/* Animated Background */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary-300/20 to-electric-400/20 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500"></div>
+                  </button>
+                </form>
+              )}
+            </div>
+          </div>
+
+          {/* Contact Information & Stats */}
+          <div className="space-y-8">
+            {/* Contact Information */}
+            <div className="ai-panel">
+              <h3 className="text-2xl font-bold mb-8 text-white font-logo flex items-center">
+                <Brain className="mr-3 w-6 h-6 text-primary-300" />
+                AI Command Center
+              </h3>
+
+              <div className="space-y-6">
+                {contactInfo.map((info, index) => {
+                  const IconComponent = info.icon;
+                  return (
+                    <div
+                      key={index}
+                      className="flex items-start space-x-4 group"
+                    >
+                      <div className="ai-icon-container !w-12 !h-12 group-hover:scale-110 transition-transform duration-300">
+                        <IconComponent className="w-6 h-6 text-primary-300 group-hover:text-white transition-colors duration-300" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-white mb-1 font-logo group-hover:text-primary-300 transition-colors duration-300">
+                          {info.label}
+                        </h4>
+                        <p className="text-primary-300 font-medium mb-1 font-logo">
+                          {info.value}
+                        </p>
+                        <p className="text-gray-400 text-sm font-logo">
+                          {info.description}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Social Links */}
+              <div className="mt-8 pt-8 border-t border-gray-800">
+                <h4 className="font-semibold text-white mb-4 font-logo">
+                  Connect on Neural Networks
+                </h4>
+                <div className="flex space-x-4">
                   <a
                     href="https://www.facebook.com/nyxpro2022"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-4 p-4 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-500/30 rounded-xl hover:border-blue-400/50 transition-all duration-300 group ai-glow"
+                    className="ai-icon-container !w-12 !h-12 hover:scale-110 transition-all duration-300 group"
+                    aria-label="Follow Nyxpro AI on Facebook"
                   >
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <Facebook className="w-6 h-6 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="font-semibold text-white group-hover:text-blue-400 transition-colors duration-300">
-                        Follow us on Facebook
-                      </h4>
-                      <p className="text-sm text-gray-300">
-                        Join our community and get the latest updates on
-                        outsourcing trends
-                      </p>
-                    </div>
-                    <div className="text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <Send className="w-5 h-5" />
-                    </div>
+                    <Facebook className="w-5 h-5 text-primary-300 group-hover:text-white transition-colors duration-300" />
                   </a>
-
                   <a
                     href="https://www.linkedin.com/in/jephmari/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-4 p-4 bg-gradient-to-r from-blue-700/10 to-blue-800/10 border border-blue-600/30 rounded-xl hover:border-blue-500/50 transition-all duration-300 group ai-glow"
+                    className="ai-icon-container !w-12 !h-12 hover:scale-110 transition-all duration-300 group"
+                    aria-label="Connect with Nyxpro AI on LinkedIn"
                   >
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-700 to-blue-800 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <Linkedin className="w-6 h-6 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="font-semibold text-white group-hover:text-blue-400 transition-colors duration-300">
-                        Connect on LinkedIn
-                      </h4>
-                      <p className="text-sm text-gray-300">
-                        Professional insights and business outsourcing expertise
-                      </p>
-                    </div>
-                    <div className="text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <Send className="w-5 h-5" />
-                    </div>
+                    <Linkedin className="w-5 h-5 text-primary-300 group-hover:text-white transition-colors duration-300" />
                   </a>
                 </div>
               </div>
             </div>
 
-            {/* Contact Information */}
-            <div className="card p-8 relative overflow-hidden">
-              {/* Background Effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-accent-500/5 via-transparent to-primary-500/5"></div>
+            {/* AI System Stats */}
+            <div className="ai-panel">
+              <h3 className="text-2xl font-bold mb-8 text-white font-logo flex items-center">
+                <Activity className="mr-3 w-6 h-6 text-electric-400" />
+                Live AI System Status
+              </h3>
 
-              <div className="relative z-10">
-                <h3 className="text-2xl font-bold mb-6 text-white">
-                  Get In Touch
-                </h3>
+              <div className="grid grid-cols-2 gap-4">
+                {aiStats.map((stat, index) => {
+                  const IconComponent = stat.icon;
+                  const colorClasses = getStatColor(stat.color);
 
-                <div className="space-y-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg flex items-center justify-center ai-glow">
-                      <Mail className="w-5 h-5 text-white" />
+                  return (
+                    <div
+                      key={index}
+                      className={`p-4 rounded-xl border transition-all duration-300 hover:scale-105 group ${colorClasses}`}
+                    >
+                      <div className="flex items-center justify-center mb-3">
+                        <IconComponent
+                          className={`w-6 h-6 ${
+                            colorClasses.split(" ")[0]
+                          } group-hover:animate-pulse`}
+                        />
+                      </div>
+                      <div className="text-center">
+                        <div
+                          className={`text-2xl font-bold mb-1 ${
+                            colorClasses.split(" ")[0]
+                          } font-logo`}
+                        >
+                          {stat.value}
+                        </div>
+                        <div className="text-gray-300 text-sm font-logo">
+                          {stat.label}
+                        </div>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-white">Email Us</h4>
-                      <p className="text-gray-300">contact@nyxpro.com</p>
-                      <p className="text-xs text-gray-400">
-                        We respond within 24 hours
-                      </p>
-                    </div>
-                  </div>
+                  );
+                })}
+              </div>
 
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-accent-500 to-accent-600 rounded-lg flex items-center justify-center ai-glow">
-                      <Phone className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-white">Call Us</h4>
-                      <p className="text-gray-300">+63 (920) 123-4567</p>
-                      <p className="text-xs text-gray-400">
-                        Mon-Fri, 8AM-6PM (Philippine Time)
-                      </p>
-                    </div>
+              {/* Real-time Status Indicator */}
+              <div className="mt-6 p-4 bg-gradient-to-r from-primary-300/10 to-electric-400/10 rounded-xl border border-primary-300/30">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-3 h-3 bg-primary-300 rounded-full animate-pulse"></div>
+                    <span className="text-white font-medium font-logo">
+                      AI Systems Operational
+                    </span>
                   </div>
-
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-primary-400 to-accent-400 rounded-lg flex items-center justify-center ai-glow">
-                      <MapPin className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-white">Location</h4>
-                      <p className="text-gray-300">Mindanao, Philippines</p>
-                      <p className="text-xs text-gray-400">
-                        Serving clients worldwide
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Quick Stats */}
-                <div className="grid grid-cols-3 gap-4 mt-8 pt-6 border-t border-gray-700">
-                  <div className="text-center">
-                    <div className="flex items-center justify-center space-x-1 mb-1">
-                      <Clock className="w-4 h-4 text-primary-400" />
-                      <span className="text-lg font-bold gradient-text">
-                        24/7
-                      </span>
-                    </div>
-                    <p className="text-xs text-gray-400">Response Time</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="flex items-center justify-center space-x-1 mb-1">
-                      <Users className="w-4 h-4 text-accent-400" />
-                      <span className="text-lg font-bold gradient-text">
-                        98%
-                      </span>
-                    </div>
-                    <p className="text-xs text-gray-400">Client Satisfaction</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="flex items-center justify-center space-x-1 mb-1">
-                      <MessageCircle className="w-4 h-4 text-primary-400" />
-                      <span className="text-lg font-bold gradient-text">
-                        500+
-                      </span>
-                    </div>
-                    <p className="text-xs text-gray-400">Projects Delivered</p>
+                  <div className="flex items-center space-x-2">
+                    <Clock className="w-4 h-4 text-gray-400" />
+                    <span className="text-gray-400 text-sm font-logo">
+                      Real-time monitoring
+                    </span>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Right Side - Contact Form */}
-          <div className="card p-8 relative overflow-hidden">
-            {/* Background Effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 via-transparent to-accent-500/5"></div>
-
-            <div className="relative z-10">
-              <h3 className="text-2xl font-bold mb-6 text-white">
-                Start Your Outsourcing Journey
-              </h3>
-
-              <p className="text-gray-300 mb-8">
-                Tell us about your business needs and let's explore how our
-                Filipino talent can help you achieve your goals.
-              </p>
-
-              <form className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label
-                      htmlFor="firstName"
-                      className="block text-sm font-medium text-gray-300 mb-2"
-                    >
-                      First Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-gray-800/50 text-white placeholder-gray-400 transition-all duration-300"
-                      placeholder="John"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="lastName"
-                      className="block text-sm font-medium text-gray-300 mb-2"
-                    >
-                      Last Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-gray-800/50 text-white placeholder-gray-400 transition-all duration-300"
-                      placeholder="Doe"
-                      required
-                    />
-                  </div>
+            {/* AI Consultation CTA */}
+            <div className="ai-panel">
+              <div className="text-center">
+                <div className="ai-icon-container mx-auto mb-6">
+                  <Zap className="w-8 h-8 text-electric-400" />
                 </div>
 
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-300 mb-2"
-                  >
-                    Business Email *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-gray-800/50 text-white placeholder-gray-400 transition-all duration-300"
-                    placeholder="john@company.com"
-                    required
-                  />
-                </div>
+                <h3 className="text-xl font-bold mb-4 text-white font-logo">
+                  Need Immediate AI Consultation?
+                </h3>
 
-                <div>
-                  <label
-                    htmlFor="company"
-                    className="block text-sm font-medium text-gray-300 mb-2"
-                  >
-                    Company Name
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-gray-800/50 text-white placeholder-gray-400 transition-all duration-300"
-                    placeholder="Your Company Inc."
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="service"
-                    className="block text-sm font-medium text-gray-300 mb-2"
-                  >
-                    Service Interest
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-gray-800/50 text-white transition-all duration-300"
-                  >
-                    <option value="">Select a service</option>
-                    <option value="customer-support">Customer Support</option>
-                    <option value="technical-development">
-                      Technical Development
-                    </option>
-                    <option value="virtual-assistant">Virtual Assistant</option>
-                    <option value="digital-marketing">Digital Marketing</option>
-                    <option value="bpo">Business Process Outsourcing</option>
-                    <option value="remote-team">Remote Team Integration</option>
-                    <option value="consultation">Consultation</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-gray-300 mb-2"
-                  >
-                    Project Details *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-gray-800/50 text-white placeholder-gray-400 transition-all duration-300 resize-none"
-                    placeholder="Tell us about your outsourcing needs, team size requirements, timeline, and any specific skills you're looking for..."
-                    required
-                  ></textarea>
-                </div>
-
-                <button type="submit" className="w-full btn-primary group">
-                  Start Your Outsourcing Journey
-                  <Send className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </button>
-
-                <p className="text-xs text-gray-400 text-center">
-                  By submitting this form, you agree to our privacy policy.
-                  We'll respond within 24 hours with a customized outsourcing
-                  proposal.
+                <p className="text-gray-300 mb-6 font-logo">
+                  Schedule a direct neural link with our AI experts for
+                  personalized guidance and strategic planning.
                 </p>
-              </form>
+
+                <button className="btn-secondary w-full group font-logo">
+                  <Shield className="mr-2 w-4 h-4" />
+                  Schedule AI Strategy Session
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="mt-16 text-center p-8 bg-gradient-to-r from-primary-500/10 via-accent-500/10 to-primary-500/10 rounded-2xl border border-primary-500/20">
-          <h3 className="text-2xl font-bold mb-4 text-white">
-            Ready to Reduce Costs by 70%?
-          </h3>
-          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-            Join hundreds of successful businesses that have transformed their
-            operations with Nyxpro's Filipino talent. Let's discuss your
-            outsourcing needs today.
-          </p>
-          <button className="btn-primary mx-auto">
-            Schedule a Free Consultation
-          </button>
         </div>
       </div>
     </section>
