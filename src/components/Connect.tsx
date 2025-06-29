@@ -400,10 +400,15 @@ const Connect = () => {
                   personalized guidance and strategic planning.
                 </p>
 
-                <button className="btn-secondary w-full group font-logo">
+                <a
+                  href="https://calendly.com/jephmari-nyxpro/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary w-full group font-logo inline-flex items-center justify-center"
+                >
                   <Shield className="mr-2 w-4 h-4" />
-                  Schedule AI Strategy Session
-                </button>
+                  Book Free Consultation Call
+                </a>
               </div>
             </div>
           </div>

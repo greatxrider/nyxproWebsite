@@ -183,13 +183,15 @@ const Hero = () => {
                     <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
                   </button>
                 ) : (
-                  <button
-                    className="btn-primary group font-logo text-lg px-8 py-4"
-                    onClick={() => setIsAuthModalOpen(true)}
+                  <a
+                    href="https://calendly.com/jephmari-nyxpro/30min"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary group font-logo text-lg px-8 py-4 inline-flex items-center"
                   >
-                    Start AI Transformation
+                    Schedule Discovery Call
                     <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
-                  </button>
+                  </a>
                 )}
 
                 <button className="btn-secondary group font-logo text-lg px-8 py-4">

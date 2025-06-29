@@ -362,10 +362,15 @@ const ClientMarquee = () => {
                   healthcare organization's efficiency, reduce costs, and
                   improve patient outcomes.
                 </p>
-                <button className="btn-primary group font-logo text-lg px-8 py-4">
-                  Start Your Transformation
+                <a
+                  href="https://calendly.com/jephmari-nyxpro/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary group font-logo text-lg px-8 py-4 inline-flex items-center"
+                >
+                  Book Your Strategy Call
                   <Star className="ml-2 w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-                </button>
+                </a>
               </div>
 
               {/* Corner Accents */}
