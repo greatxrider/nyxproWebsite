@@ -22,10 +22,10 @@ const Hero = () => {
   const { user } = useAuth();
 
   const rotatingTexts = [
-    "Intelligent Technology Solutions",
-    "AI-Powered Business Transformation",
-    "Neural Network-Driven Growth",
-    "Predictive Analytics & Automation",
+    "Business Solutions That Drive Results",
+    "AI-Enhanced Business Partnership",
+    "Your Success Is Our Mission",
+    "Dedicated Business Growth Partners",
   ];
 
   useEffect(() => {
@@ -48,23 +48,25 @@ const Hero = () => {
   const aiCapabilities = [
     {
       icon: Brain,
-      title: "Neural Automation",
-      description: "Self-learning AI systems that evolve with your business",
+      title: "Business-First Approach",
+      description:
+        "We understand your industry and treat your challenges as our own",
     },
     {
       icon: BarChart3,
-      title: "Predictive Analytics",
-      description: "Data-driven insights for strategic decision making",
+      title: "Proven Results",
+      description:
+        "Trained and equipped to deliver measurable business outcomes",
     },
     {
       icon: Target,
-      title: "Smart Optimization",
-      description: "Continuous process improvement through machine learning",
+      title: "Partnership Focus",
+      description: "Your success drives our commitment to excellence",
     },
     {
       icon: Globe,
-      title: "Digital Integration",
-      description: "Seamless AI-powered ecosystem connections",
+      title: "Smart Solutions",
+      description: "AI-enhanced tools tailored to your specific business needs",
     },
   ];
 
@@ -145,9 +147,10 @@ const Hero = () => {
               </h1>
 
               <p className="text-xl text-gray-300 leading-relaxed mb-10 max-w-2xl font-logo">
-                Transform your business with cutting-edge AI solutions that
-                automate processes, predict outcomes, and drive exponential
-                growth through intelligent technology integration.
+                We solve your business challenges with AI-powered solutions,
+                treating your success as our own. Our experienced team is
+                trained and equipped to understand your business needs and
+                deliver results that matter.
               </p>
 
               {/* AI Capabilities Grid */}
@@ -203,19 +206,21 @@ const Hero = () => {
               {/* Social Proof */}
               <div className="flex items-center space-x-8 mt-12 pt-8 border-t border-gray-800/50">
                 <div className="text-center">
-                  <div className="text-2xl font-bold ai-heading">500+</div>
+                  <div className="text-2xl font-bold ai-heading">100+</div>
                   <div className="text-sm text-gray-400 font-logo">
-                    AI Models
+                    Projects Delivered
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold ai-heading">99.9%</div>
-                  <div className="text-sm text-gray-400 font-logo">Uptime</div>
+                  <div className="text-2xl font-bold ai-heading">95%</div>
+                  <div className="text-sm text-gray-400 font-logo">
+                    Client Satisfaction
+                  </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold ai-heading">24/7</div>
+                  <div className="text-2xl font-bold ai-heading">2025</div>
                   <div className="text-sm text-gray-400 font-logo">
-                    AI Support
+                    Year Established
                   </div>
                 </div>
               </div>

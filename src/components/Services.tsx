@@ -304,9 +304,9 @@ const Services = () => {
           </h2>
 
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-logo">
-            Transform your business with our revolutionary AI-enhanced services,
-            designed to automate processes, predict outcomes, and drive
-            intelligent growth across all aspects of your operations.
+            We deliver business solutions with AI-powered expertise, treating
+            your challenges as our own. Our dedicated approach ensures results
+            that drive your success forward.
           </p>
         </div>
 

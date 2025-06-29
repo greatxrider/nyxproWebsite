@@ -41,18 +41,23 @@ const Footer = () => {
   const aiStats = [
     {
       icon: Activity,
-      value: "99.9%",
-      label: "Neural Uptime",
+      value: "100+",
+      label: "Projects Delivered",
       color: "primary",
     },
     {
       icon: BarChart3,
-      value: "24/7",
-      label: "AI Monitoring",
+      value: "95%",
+      label: "Client Satisfaction",
       color: "electric",
     },
-    { icon: Cpu, value: "500+", label: "Active Models", color: "accent" },
-    { icon: Globe, value: "Global", label: "AI Network", color: "primary" },
+    { icon: Cpu, value: "2025", label: "Year Established", color: "accent" },
+    {
+      icon: Globe,
+      value: "Multiple",
+      label: "Industries Served",
+      color: "primary",
+    },
   ];
 
   const getStatColor = (color: string) => {
