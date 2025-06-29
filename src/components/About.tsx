@@ -46,20 +46,20 @@ const About = () => {
     {
       name: "Jeph Mari",
       role: "Co-Founder and CTO",
-      expertise: "AI Automation & Robotics Engineering",
+      expertise: "Automation & Software Engineering",
       image: "/images/jephMari.jpg",
       description:
-        "Electronics and Software Engineer specializing in AI automation systems and robotics implementation. Technical visionary behind Nyxpro's cutting-edge AI architecture, driving innovation in intelligent automation solutions and enterprise-grade technology deployment.",
+        "Electronics and Software Engineer specializing in business automation and software development. Technical leader behind NYXPRO's automation solutions, focusing on practical technology implementations that solve real business challenges.",
       specialties: [
-        "AI Automation Specialist",
-        "Robotics Implementation",
-        "AI Architecture",
-        "Software Engineering",
+        "Business Automation",
+        "Software Development",
+        "System Integration",
+        "Web Development",
         "Technical Leadership",
-        "Systems Integration",
+        "Process Optimization",
       ],
       achievements:
-        "Architected 200+ AI automation systems across diverse industries",
+        "Led development of automation solutions for 100+ business projects",
     },
   ];
 
@@ -112,20 +112,20 @@ const About = () => {
     {
       name: "Jeph Mari",
       role: "Co-Founder and CTO",
-      expertise: "AI Automation & Robotics Engineering",
+      expertise: "Automation & Software Engineering",
       image: "/images/jephMari.jpg",
       description:
-        "Electronics and Software Engineer specializing in AI automation systems and robotics implementation. Technical visionary behind Nyxpro's cutting-edge AI architecture, driving innovation in intelligent automation solutions and enterprise-grade technology deployment.",
+        "Electronics and Software Engineer specializing in business automation and software development. Technical leader behind NYXPRO's automation solutions, focusing on practical technology implementations that solve real business challenges.",
       specialties: [
-        "AI Automation Specialist",
-        "Robotics Implementation",
-        "AI Architecture",
-        "Software Engineering",
+        "Business Automation",
+        "Software Development",
+        "System Integration",
+        "Web Development",
         "Technical Leadership",
-        "Systems Integration",
+        "Process Optimization",
       ],
       achievements:
-        "Architected 200+ AI automation systems across diverse industries",
+        "Led development of automation solutions for 100+ business projects",
     },
   ];
 
@@ -150,14 +150,22 @@ const About = () => {
     },
     {
       category: "Cloud & Infrastructure",
-      technologies: ["Google Cloud", "Docker", "Node.js", "PostgreSQL"],
+      technologies: [
+        "AWS",
+        "Azure",
+        "Google Cloud",
+        "Docker",
+        "Node.js",
+        "PostgreSQL",
+      ],
       icon: Globe,
       color: "accent",
     },
     {
-      category: "Industry Solutions",
+      category: "Business Services",
       technologies: [
         "Medical Billing",
+        "Virtual Assistance",
         "Bookkeeping",
         "Accounting",
         "Data Science",
@@ -230,16 +238,17 @@ const About = () => {
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 ai-heading">
             <span className="gradient-text font-logo">
-              Intelligent Solutions
+              Complete Business Solutions
             </span>
-            <span className="text-white block">for Digital Future</span>
+            <span className="text-white block">for Growing Companies</span>
           </h2>
 
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-logo">
-            At NYXPRO IT Consulting and Services, we're not just building
-            software—we're architecting the future of intelligent business
-            operations through revolutionary AI solutions that transform how
-            organizations operate, compete, and thrive.
+            At NYXPRO IT Consulting and Services, we provide comprehensive
+            business solutions from automation and development to accounting and
+            government registration. Our experienced team treats your business
+            challenges as our own, delivering practical solutions that help your
+            company grow.
           </p>
         </div>
 
@@ -323,7 +332,7 @@ const About = () => {
               <div className="absolute bottom-8 left-8 w-2 h-6 bg-gradient-to-t from-electric-400 to-transparent animate-pulse"></div>
 
               <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-primary-300 to-electric-400 text-black px-4 py-2 rounded-lg font-semibold text-sm shadow-lg font-logo">
-                AI-First Technology
+                Business Solutions
               </div>
             </div>
           </div>
@@ -336,10 +345,10 @@ const About = () => {
               Meet Our Founders
             </h3>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto font-logo">
-              Visionary leaders and technical experts driving the future of
-              intelligent business solutions with deep expertise in strategic
-              planning, AI automation, and cutting-edge technology
-              implementation.
+              Experienced leaders driving business growth through practical
+              automation solutions and strategic planning. Our founders bring
+              expertise in business development, software engineering, and
+              delivering results that matter to our clients.
             </p>
           </div>
 
@@ -564,25 +573,28 @@ const About = () => {
                 const colorClasses = getColorClasses(tech.color);
 
                 return (
-                  <div key={index} className="ai-panel group cursor-pointer">
-                    <div className="ai-icon-container mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <div
+                    key={index}
+                    className="ai-panel group cursor-pointer text-center"
+                  >
+                    <div className="ai-icon-container mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                       <IconComponent
                         className={`w-8 h-8 ${colorClasses.split(" ")[0]}`}
                       />
                     </div>
 
-                    <h4 className="text-xl font-bold mb-4 text-white group-hover:text-primary-300 transition-colors duration-300 font-logo">
+                    <h4 className="text-xl font-bold mb-6 text-white group-hover:text-primary-300 transition-colors duration-300 font-logo min-h-[3rem] flex items-center justify-center">
                       {tech.category}
                     </h4>
 
-                    <div className="space-y-3">
+                    <div className="space-y-3 text-left">
                       {tech.technologies.map((technology, techIndex) => (
                         <div
                           key={techIndex}
                           className="flex items-center space-x-3 group/tech"
                         >
-                          <div className="w-1.5 h-1.5 bg-primary-300 rounded-full group-hover/tech:animate-pulse"></div>
-                          <span className="text-gray-300 font-logo group-hover/tech:text-gray-200 transition-colors">
+                          <div className="w-1.5 h-1.5 bg-primary-300 rounded-full group-hover/tech:animate-pulse flex-shrink-0"></div>
+                          <span className="text-gray-300 font-logo group-hover/tech:text-gray-200 transition-colors text-sm">
                             {technology}
                           </span>
                         </div>
