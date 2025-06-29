@@ -23,19 +23,19 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { name: "Neural Automation", href: "#services" },
-    { name: "AI Solutions", href: "#services" },
+    { name: "Automation Services", href: "#services" },
+    { name: "Business Solutions", href: "#services" },
     { name: "Our Team", href: "#team" },
     { name: "Careers", href: "/careers" },
     { name: "Connect", href: "#connect" },
   ];
 
-  const aiServices = [
-    { name: "AI Automation", href: "#services" },
-    { name: "Healthcare AI Billing", href: "#services" },
-    { name: "Intelligent Data Management", href: "#services" },
-    { name: "Neural Workflow Engine", href: "#services" },
-    { name: "AI Software Architecture", href: "#services" },
+  const businessServices = [
+    { name: "Automation & Integration", href: "#services" },
+    { name: "Medical Billing Services", href: "#services" },
+    { name: "Web Development", href: "#services" },
+    { name: "Accounting & Bookkeeping", href: "#services" },
+    { name: "Business Registration", href: "#services" },
   ];
 
   const aiStats = [
@@ -121,9 +121,9 @@ const Footer = () => {
             </div>
 
             <p className="text-gray-300 leading-relaxed font-logo">
-              Pioneering the future of intelligent business operations through
-              revolutionary AI solutions that transform how organizations
-              compete and thrive.
+              Providing comprehensive business solutions from automation and
+              development to accounting and government registration services.
+              Your success is our mission.
             </p>
 
             {/* AI Performance Stats */}
@@ -166,7 +166,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="ai-icon-container !w-12 !h-12 hover:scale-110 transition-all duration-300 group"
-                  aria-label="Follow NYXPRO AI on Facebook"
+                  aria-label="Follow NYXPRO on Facebook"
                 >
                   <Facebook className="w-5 h-5 text-primary-300 group-hover:text-white transition-colors duration-300" />
                 </a>
@@ -175,7 +175,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="ai-icon-container !w-12 !h-12 hover:scale-110 transition-all duration-300 group"
-                  aria-label="Connect with NYXPRO AI on LinkedIn"
+                  aria-label="Connect with NYXPRO on LinkedIn"
                 >
                   <Linkedin className="w-5 h-5 text-primary-300 group-hover:text-white transition-colors duration-300" />
                 </a>
@@ -187,7 +187,7 @@ const Footer = () => {
           <div className="space-y-6">
             <h4 className="text-lg font-semibold text-white font-logo flex items-center">
               <Brain className="mr-2 w-5 h-5 text-primary-300" />
-              Quick Neural Links
+              Quick Links
             </h4>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
@@ -205,10 +205,10 @@ const Footer = () => {
 
             <div className="mt-8">
               <h5 className="text-sm font-semibold text-white mb-3 font-logo">
-                AI Newsletter
+                Business Updates
               </h5>
               <p className="text-gray-400 text-sm mb-4 font-logo">
-                Get the latest AI insights and updates
+                Stay informed about our latest services and business insights
               </p>
               <div className="flex">
                 <input
@@ -218,7 +218,7 @@ const Footer = () => {
                 />
                 <button
                   className="px-4 py-2 bg-primary-300 text-black rounded-r-lg hover:bg-primary-400 transition-colors duration-300 font-logo"
-                  aria-label="Subscribe to AI newsletter"
+                  aria-label="Subscribe to business updates"
                 >
                   <Mail className="w-4 h-4" />
                 </button>
@@ -230,10 +230,10 @@ const Footer = () => {
           <div className="space-y-6">
             <h4 className="text-lg font-semibold text-white font-logo flex items-center">
               <Zap className="mr-2 w-5 h-5 text-electric-400" />
-              AI Solutions
+              Business Services
             </h4>
             <ul className="space-y-3">
-              {aiServices.map((service, index) => (
+              {businessServices.map((service, index) => (
                 <li key={index}>
                   <a
                     href={service.href}
@@ -248,11 +248,11 @@ const Footer = () => {
 
             <div className="mt-8 p-4 bg-gradient-to-r from-electric-400/10 to-primary-300/10 rounded-lg border border-electric-400/30">
               <h5 className="text-sm font-semibold text-white mb-2 font-logo">
-                Custom AI Solutions
+                Custom Business Solutions
               </h5>
               <p className="text-gray-400 text-sm font-logo">
-                Need something specific? Our AI architects can design custom
-                solutions.
+                Need something specific? Our team can create tailored solutions
+                for your business needs.
               </p>
             </div>
           </div>
@@ -323,11 +323,10 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-center md:text-left">
             <p className="text-gray-400 font-logo">
-              © {currentYear} NYXPRO IT Consulting and Services. All rights
-              reserved.
+              © 2020 NYXPRO IT Consulting and Services. All rights reserved.
             </p>
             <p className="text-gray-500 text-sm font-logo">
-              Powered by Neural Intelligence & Advanced AI Architecture
+              Delivering Business Solutions with Technical Excellence
             </p>
           </div>
 
@@ -342,7 +341,7 @@ const Footer = () => {
               href="#"
               className="text-gray-400 hover:text-primary-300 transition-colors duration-300 font-logo"
             >
-              AI Ethics
+              Quality Assurance
             </a>
             <a
               href="#"
@@ -351,10 +350,10 @@ const Footer = () => {
               Terms of Service
             </a>
             <a
-              href="#"
+              href="#services"
               className="text-gray-400 hover:text-primary-300 transition-colors duration-300 font-logo"
             >
-              AI Solutions
+              Our Services
             </a>
           </div>
         </div>
@@ -364,7 +363,7 @@ const Footer = () => {
           <div className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-primary-300/10 to-electric-400/10 rounded-full border border-primary-300/30 backdrop-blur-sm">
             <Brain className="w-5 h-5 text-primary-300 animate-pulse" />
             <span className="text-primary-300 font-medium font-logo">
-              Powered by Advanced AI Technology
+              Professional Business Solutions
             </span>
             <Cpu className="w-5 h-5 text-electric-400 animate-spin-slow" />
           </div>
