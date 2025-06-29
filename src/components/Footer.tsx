@@ -96,7 +96,7 @@ const Footer = () => {
               <div className="relative">
                 <Image
                   src="/images/nyxproLogo.jpg"
-                  alt="Nyxpro IT Consulting and Services Logo"
+                  alt="NYXPRO IT Consulting and Services Logo"
                   width={50}
                   height={50}
                   className="rounded-xl shadow-lg ai-glow"
@@ -104,10 +104,11 @@ const Footer = () => {
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-primary-300/20 to-electric-400/20 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div>
-                <h3 className="text-2xl font-bold gradient-text font-logo">
-                  Nyxpro
+                <h3 className="text-2xl font-bold font-logo">
+                  <span className="text-white">NYX</span>
+                  <span style={{ color: "#5CE2E7" }}>PRO</span>
                 </h3>
-                <div className="text-sm text-gray-400 font-logo">
+                <div className="text-sm text-white font-logo">
                   IT Consulting and Services
                 </div>
               </div>
@@ -151,7 +152,7 @@ const Footer = () => {
             {/* Social Media */}
             <div>
               <h4 className="text-lg font-semibold text-white mb-4 font-logo">
-                Neural Networks
+                Follow Us
               </h4>
               <div className="flex space-x-4">
                 <a
@@ -159,7 +160,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="ai-icon-container !w-12 !h-12 hover:scale-110 transition-all duration-300 group"
-                  aria-label="Follow Nyxpro AI on Facebook"
+                  aria-label="Follow NYXPRO AI on Facebook"
                 >
                   <Facebook className="w-5 h-5 text-primary-300 group-hover:text-white transition-colors duration-300" />
                 </a>
@@ -168,7 +169,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="ai-icon-container !w-12 !h-12 hover:scale-110 transition-all duration-300 group"
-                  aria-label="Connect with Nyxpro AI on LinkedIn"
+                  aria-label="Connect with NYXPRO AI on LinkedIn"
                 >
                   <Linkedin className="w-5 h-5 text-primary-300 group-hover:text-white transition-colors duration-300" />
                 </a>
@@ -254,7 +255,7 @@ const Footer = () => {
           <div className="space-y-6">
             <h4 className="text-lg font-semibold text-white font-logo flex items-center">
               <Shield className="mr-2 w-5 h-5 text-accent-400" />
-              AI Command Center
+              Contact Information
             </h4>
 
             <div className="space-y-4">
@@ -263,12 +264,10 @@ const Footer = () => {
                   <Mail className="w-5 h-5 text-primary-300 group-hover:text-white transition-colors duration-300" />
                 </div>
                 <div>
-                  <h5 className="font-semibold text-white font-logo">
-                    Neural Link
-                  </h5>
-                  <p className="text-primary-300 font-logo">hello@nyxpro.us</p>
+                  <h5 className="font-semibold text-white font-logo">Email</h5>
+                  <p className="text-primary-300 font-logo">hr@nyxpro.com</p>
                   <p className="text-gray-400 text-sm font-logo">
-                    24/7 AI support
+                    Business inquiries
                   </p>
                 </div>
               </div>
@@ -278,14 +277,12 @@ const Footer = () => {
                   <Phone className="w-5 h-5 text-electric-400 group-hover:text-white transition-colors duration-300" />
                 </div>
                 <div>
-                  <h5 className="font-semibold text-white font-logo">
-                    Direct Line
-                  </h5>
+                  <h5 className="font-semibold text-white font-logo">Phone</h5>
                   <p className="text-electric-400 font-logo">
-                    +1 (555) AI-NYXPRO
+                    +63 967 859 7645
                   </p>
                   <p className="text-gray-400 text-sm font-logo">
-                    Intelligent assistance
+                    Monday to Friday
                   </p>
                 </div>
               </div>
@@ -296,13 +293,13 @@ const Footer = () => {
                 </div>
                 <div>
                   <h5 className="font-semibold text-white font-logo">
-                    Innovation Hub
+                    Address
                   </h5>
                   <p className="text-accent-400 font-logo">
-                    Global AI Operations
+                    MEA Building, Benito Labao Street
                   </p>
                   <p className="text-gray-400 text-sm font-logo">
-                    Worldwide coverage
+                    Iligan City, Philippines
                   </p>
                 </div>
               </div>
@@ -338,7 +335,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-center md:text-left">
             <p className="text-gray-400 font-logo">
-              © {currentYear} Nyxpro IT Consulting and Services. All rights
+              © {currentYear} NYXPRO IT Consulting and Services. All rights
               reserved.
             </p>
             <p className="text-gray-500 text-sm font-logo">

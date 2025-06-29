@@ -22,7 +22,7 @@ const Header = () => {
               <div className="relative">
                 <Image
                   src="/images/nyxproLogo.jpg"
-                  alt="Nyxpro IT Consulting and Services Logo"
+                  alt="NYXPRO IT Consulting and Services Logo"
                   width={45}
                   height={45}
                   className="rounded-xl shadow-lg ai-glow"
@@ -30,10 +30,11 @@ const Header = () => {
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-primary-300/20 to-electric-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div>
-                <span className="text-2xl font-bold text-white font-logo">
-                  Nyxpro
+                <span className="text-2xl font-bold font-logo">
+                  <span className="text-white">NYX</span>
+                  <span style={{ color: "#5CE2E7" }}>PRO</span>
                 </span>
-                <div className="text-xs text-primary-300/80 font-logo">
+                <div className="text-xs text-white font-logo">
                   IT Consulting and Services
                 </div>
               </div>
@@ -161,7 +162,7 @@ const Header = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-primary-300/20 hover:bg-primary-300/30 border border-primary-300/40 hover:border-primary-300/60 rounded-xl transition-all duration-300 ai-glow group shadow-lg shadow-primary-300/10"
-                    aria-label="Follow Nyxpro on Facebook"
+                    aria-label="Follow NYXPRO on Facebook"
                   >
                     <Facebook className="w-5 h-5 text-primary-300 group-hover:text-white transition-colors duration-300" />
                   </a>
@@ -170,7 +171,7 @@ const Header = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-primary-300/20 hover:bg-primary-300/30 border border-primary-300/40 hover:border-primary-300/60 rounded-xl transition-all duration-300 ai-glow group shadow-lg shadow-primary-300/10"
-                    aria-label="Connect with Nyxpro on LinkedIn"
+                    aria-label="Connect with NYXPRO on LinkedIn"
                   >
                     <Linkedin className="w-5 h-5 text-primary-300 group-hover:text-white transition-colors duration-300" />
                   </a>

@@ -212,7 +212,7 @@ const About = () => {
             <div className="w-12 h-0.5 bg-gradient-to-r from-transparent to-primary-300"></div>
             <span className="text-sm font-medium tracking-wide px-4 py-2 bg-primary-300/10 rounded-full border border-primary-300/30 font-logo">
               <Users className="inline w-4 h-4 mr-2" />
-              About Nyxpro IT Consulting and Services
+              About NYXPRO IT Consulting and Services
             </span>
             <div className="w-12 h-0.5 bg-gradient-to-l from-transparent to-primary-300"></div>
           </div>
@@ -225,7 +225,7 @@ const About = () => {
           </h2>
 
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-logo">
-            At Nyxpro IT Consulting and Services, we're not just building
+            At NYXPRO IT Consulting and Services, we're not just building
             software—we're architecting the future of intelligent business
             operations through revolutionary AI solutions that transform how
             organizations operate, compete, and thrive.
@@ -241,7 +241,7 @@ const About = () => {
             <div className="space-y-6 text-gray-300 leading-relaxed font-logo">
               <p className="text-lg">
                 <strong className="text-primary-300 font-logo">
-                  At Nyxpro IT Consulting and Services,
+                  At NYXPRO IT Consulting and Services,
                 </strong>{" "}
                 we specialize in transforming traditional business operations
                 through artificial intelligence, machine learning, and
@@ -290,7 +290,7 @@ const About = () => {
             <div className="relative bg-gradient-to-br from-black via-gray-900/50 to-black rounded-3xl p-8 border border-gray-800 ai-glow">
               <Image
                 src="/images/nyxproLogo.jpg"
-                alt="Nyxpro IT Consulting and Services - Intelligent Technology Solutions"
+                alt="NYXPRO IT Consulting and Services - Intelligent Technology Solutions"
                 width={320}
                 height={320}
                 className="rounded-2xl shadow-xl"
@@ -420,7 +420,7 @@ const About = () => {
 
                                     <Image
                                       src={founder.image}
-                                      alt={`${founder.name} - ${founder.role} of Nyxpro IT Consulting and Services`}
+                                      alt={`${founder.name} - ${founder.role} of NYXPRO IT Consulting and Services`}
                                       width={280}
                                       height={280}
                                       className="relative z-10 rounded-full shadow-2xl border-4 border-gray-800 group-hover:scale-105 transition-all duration-500"

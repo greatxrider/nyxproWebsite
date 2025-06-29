@@ -85,21 +85,21 @@ const Connect = () => {
   const contactInfo = [
     {
       icon: Mail,
-      label: "AI Command Center",
-      value: "hello@nyxpro.us",
-      description: "Neural network-powered support",
+      label: "Email Address",
+      value: "hr@nyxpro.com",
+      description: "Business inquiries welcome",
     },
     {
       icon: Phone,
-      label: "Direct Neural Link",
-      value: "+1 (555) AI-NYXPRO",
-      description: "24/7 intelligent assistance",
+      label: "Phone Number",
+      value: "+63 967 859 7645",
+      description: "Monday to Friday support",
     },
     {
       icon: MapPin,
-      label: "AI Innovation Hub",
-      value: "Digital Transformation Center",
-      description: "Global AI operations base",
+      label: "Office Address",
+      value: "MEA Building, Benito Labao Street",
+      description: "Iligan City, Philippines",
     },
   ];
 
@@ -360,7 +360,7 @@ const Connect = () => {
             <div className="ai-panel">
               <h3 className="text-2xl font-bold mb-8 text-white font-logo flex items-center">
                 <Brain className="mr-3 w-6 h-6 text-primary-300" />
-                AI Command Center
+                Contact Information
               </h3>
 
               <div className="space-y-6">
@@ -393,7 +393,7 @@ const Connect = () => {
               {/* Social Links */}
               <div className="mt-8 pt-8 border-t border-gray-800">
                 <h4 className="font-semibold text-white mb-4 font-logo">
-                  Connect on Neural Networks
+                  Follow Us on Social Media
                 </h4>
                 <div className="flex space-x-4">
                   <a
@@ -401,7 +401,7 @@ const Connect = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="ai-icon-container !w-12 !h-12 hover:scale-110 transition-all duration-300 group"
-                    aria-label="Follow Nyxpro AI on Facebook"
+                    aria-label="Follow NYXPRO AI on Facebook"
                   >
                     <Facebook className="w-5 h-5 text-primary-300 group-hover:text-white transition-colors duration-300" />
                   </a>
@@ -410,7 +410,7 @@ const Connect = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="ai-icon-container !w-12 !h-12 hover:scale-110 transition-all duration-300 group"
-                    aria-label="Connect with Nyxpro AI on LinkedIn"
+                    aria-label="Connect with NYXPRO AI on LinkedIn"
                   >
                     <Linkedin className="w-5 h-5 text-primary-300 group-hover:text-white transition-colors duration-300" />
                   </a>
