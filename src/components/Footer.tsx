@@ -25,7 +25,7 @@ const Footer = () => {
   const quickLinks = [
     { name: "Neural Automation", href: "#services" },
     { name: "AI Solutions", href: "#services" },
-    { name: "AI Team", href: "#about" },
+    { name: "Our Team", href: "#team" },
     { name: "Connect", href: "#connect" },
   ];
 
