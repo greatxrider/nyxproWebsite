@@ -3,6 +3,9 @@ import { AuthProvider } from "@/components/AuthProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://nyxpro.vercel.app"
+  ),
   title: "NYXPRO",
   description:
     "Nyxpro is a cutting-edge AI agency specializing in AI automation, healthcare medical billing, data entry, accounting, and intelligent technology solutions to transform your business.",
@@ -11,12 +14,15 @@ export const metadata: Metadata = {
   authors: [{ name: "Nyxpro AI Agency" }],
   icons: {
     icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32x32.svg", sizes: "32x32", type: "image/svg+xml" },
+      { url: "/favicon-16x16.svg", sizes: "16x16", type: "image/svg+xml" },
       { url: "/favicon.ico", sizes: "any" },
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
     ],
     apple: [
+      { url: "/apple-touch-icon.svg", sizes: "180x180", type: "image/svg+xml" },
       { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
     shortcut: "/favicon.ico",
