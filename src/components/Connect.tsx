@@ -10,7 +10,6 @@ import {
   Brain,
   Zap,
   Shield,
-  Clock,
   MessageSquare,
   User,
   Building,
@@ -18,9 +17,6 @@ import {
   ChevronDown,
   Facebook,
   Linkedin,
-  Activity,
-  BarChart3,
-  Cpu,
 } from "lucide-react";
 
 const Connect = () => {
@@ -102,36 +98,6 @@ const Connect = () => {
       description: "Iligan City, Philippines",
     },
   ];
-
-  const aiStats = [
-    {
-      icon: Activity,
-      value: "99.9%",
-      label: "Neural Uptime",
-      color: "primary",
-    },
-    {
-      icon: BarChart3,
-      value: "24/7",
-      label: "AI Monitoring",
-      color: "electric",
-    },
-    { icon: Cpu, value: "500+", label: "Active Models", color: "accent" },
-    { icon: Brain, value: "< 1ms", label: "Response Time", color: "primary" },
-  ];
-
-  const getStatColor = (color: string) => {
-    switch (color) {
-      case "primary":
-        return "text-primary-300 bg-primary-300/10 border-primary-300/30";
-      case "electric":
-        return "text-electric-400 bg-electric-400/10 border-electric-400/30";
-      case "accent":
-        return "text-accent-400 bg-accent-400/10 border-accent-400/30";
-      default:
-        return "text-primary-300 bg-primary-300/10 border-primary-300/30";
-    }
-  };
 
   return (
     <section
@@ -414,66 +380,6 @@ const Connect = () => {
                   >
                     <Linkedin className="w-5 h-5 text-primary-300 group-hover:text-white transition-colors duration-300" />
                   </a>
-                </div>
-              </div>
-            </div>
-
-            {/* AI System Stats */}
-            <div className="ai-panel">
-              <h3 className="text-2xl font-bold mb-8 text-white font-logo flex items-center">
-                <Activity className="mr-3 w-6 h-6 text-electric-400" />
-                Live AI System Status
-              </h3>
-
-              <div className="grid grid-cols-2 gap-4">
-                {aiStats.map((stat, index) => {
-                  const IconComponent = stat.icon;
-                  const colorClasses = getStatColor(stat.color);
-
-                  return (
-                    <div
-                      key={index}
-                      className={`p-4 rounded-xl border transition-all duration-300 hover:scale-105 group ${colorClasses}`}
-                    >
-                      <div className="flex items-center justify-center mb-3">
-                        <IconComponent
-                          className={`w-6 h-6 ${
-                            colorClasses.split(" ")[0]
-                          } group-hover:animate-pulse`}
-                        />
-                      </div>
-                      <div className="text-center">
-                        <div
-                          className={`text-2xl font-bold mb-1 ${
-                            colorClasses.split(" ")[0]
-                          } font-logo`}
-                        >
-                          {stat.value}
-                        </div>
-                        <div className="text-gray-300 text-sm font-logo">
-                          {stat.label}
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-
-              {/* Real-time Status Indicator */}
-              <div className="mt-6 p-4 bg-gradient-to-r from-primary-300/10 to-electric-400/10 rounded-xl border border-primary-300/30">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-primary-300 rounded-full animate-pulse"></div>
-                    <span className="text-white font-medium font-logo">
-                      AI Systems Operational
-                    </span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Clock className="w-4 h-4 text-gray-400" />
-                    <span className="text-gray-400 text-sm font-logo">
-                      Real-time monitoring
-                    </span>
-                  </div>
                 </div>
               </div>
             </div>

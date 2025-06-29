@@ -96,21 +96,21 @@ const Team = () => {
       color: "primary",
     },
     {
-      icon: Globe,
-      number: "15+",
-      label: "Countries Served",
-      color: "electric",
-    },
-    {
       icon: TrendingUp,
       number: "300%",
       label: "Growth in 2024",
-      color: "accent",
+      color: "electric",
     },
     {
       icon: Brain,
-      number: "1000+",
-      label: "AI Solutions Deployed",
+      number: "2025",
+      label: "Year Established",
+      color: "accent",
+    },
+    {
+      icon: Globe,
+      number: "US",
+      label: "Primary Market",
       color: "primary",
     },
   ];
