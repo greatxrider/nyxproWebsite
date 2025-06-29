@@ -434,8 +434,7 @@ const Services = () => {
             <div>
               <h3 className="text-3xl lg:text-4xl font-bold mb-8 ai-heading">
                 Why Choose <span className="text-white">NYX</span>
-                <span style={{ color: "#5CE2E7" }}>PRO</span> IT Consulting and
-                Services?
+                <span style={{ color: "#5CE2E7" }}>PRO</span>?
               </h3>
               <div className="space-y-8">
                 <div className="flex items-start space-x-6">
@@ -444,12 +443,12 @@ const Services = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-3 text-white font-logo text-lg">
-                      Neural Intelligence First
+                      AI-Equipped Developer Team
                     </h4>
                     <p className="text-gray-300 font-logo leading-relaxed">
-                      Every solution is architected with deep learning
-                      algorithms at its core, ensuring maximum efficiency and
-                      predictive capabilities that evolve with your business.
+                      Our unified team of 50+ AI-trained developers collaborates
+                      seamlessly to deliver intelligent solutions that automate
+                      your business processes and accelerate growth.
                     </p>
                   </div>
                 </div>
@@ -459,12 +458,12 @@ const Services = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-3 text-white font-logo text-lg">
-                      Quantum-Speed Implementation
+                      Proven Business Efficiency
                     </h4>
                     <p className="text-gray-300 font-logo leading-relaxed">
-                      Our AI-accelerated development process reduces
-                      implementation time by 60% while maintaining
-                      enterprise-grade security and performance standards.
+                      We specialize in applying AI to real business challenges,
+                      making operations faster, smarter, and more efficient for
+                      companies across multiple industries.
                     </p>
                   </div>
                 </div>
@@ -474,12 +473,12 @@ const Services = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-3 text-white font-logo text-lg">
-                      Fortress-Level Security
+                      Collective Expertise & Trust
                     </h4>
                     <p className="text-gray-300 font-logo leading-relaxed">
-                      Military-grade security with AI-powered threat prediction
-                      and quantum-resistant encryption ensuring complete data
-                      sovereignty.
+                      As a collaborative team, we bring diverse skills and
+                      perspectives to every project, ensuring robust solutions
+                      backed by collective knowledge and experience.
                     </p>
                   </div>
                 </div>
@@ -492,38 +491,36 @@ const Services = () => {
                   <div className="flex items-center justify-center mb-4">
                     <Activity className="w-8 h-8 text-primary-300 group-hover:animate-pulse" />
                   </div>
-                  <div className="text-4xl font-bold ai-heading mb-2">
-                    99.9%
-                  </div>
+                  <div className="text-4xl font-bold ai-heading mb-2">50+</div>
                   <div className="text-gray-300 text-sm font-logo">
-                    Neural Uptime
+                    AI-Equipped Developers
                   </div>
                 </div>
                 <div className="p-8 bg-black/60 rounded-2xl border border-gray-800 hover:border-electric-400/50 transition-all duration-500 group">
                   <div className="flex items-center justify-center mb-4">
                     <Network className="w-8 h-8 text-electric-400 group-hover:animate-spin-slow" />
                   </div>
-                  <div className="text-4xl font-bold ai-heading mb-2">60%</div>
+                  <div className="text-4xl font-bold ai-heading mb-2">100+</div>
                   <div className="text-gray-300 text-sm font-logo">
-                    Faster Deployment
+                    Clients Served
                   </div>
                 </div>
                 <div className="p-8 bg-black/60 rounded-2xl border border-gray-800 hover:border-accent-400/50 transition-all duration-500 group">
                   <div className="flex items-center justify-center mb-4">
                     <BarChart3 className="w-8 h-8 text-accent-400 group-hover:animate-bounce-slow" />
                   </div>
-                  <div className="text-4xl font-bold ai-heading mb-2">24/7</div>
+                  <div className="text-4xl font-bold ai-heading mb-2">85%</div>
                   <div className="text-gray-300 text-sm font-logo">
-                    AI Monitoring
+                    Efficiency Improvement
                   </div>
                 </div>
                 <div className="p-8 bg-black/60 rounded-2xl border border-gray-800 hover:border-primary-300/50 transition-all duration-500 group">
                   <div className="flex items-center justify-center mb-4">
                     <Cpu className="w-8 h-8 text-primary-300 group-hover:animate-glow" />
                   </div>
-                  <div className="text-4xl font-bold ai-heading mb-2">500+</div>
+                  <div className="text-4xl font-bold ai-heading mb-2">300%</div>
                   <div className="text-gray-300 text-sm font-logo">
-                    AI Models Active
+                    Growth in 2024
                   </div>
                 </div>
               </div>

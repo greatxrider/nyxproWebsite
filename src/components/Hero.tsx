@@ -133,7 +133,7 @@ const Hero = () => {
                 <div className="w-12 h-0.5 bg-gradient-to-r from-transparent to-primary-300"></div>
                 <span className="text-sm font-medium tracking-wide px-4 py-2 bg-primary-300/10 rounded-full border border-primary-300/30 font-logo backdrop-blur-sm">
                   <Brain className="inline w-4 h-4 mr-2" />
-                  Welcome to the Future of AI
+                  Welcome to AI-Powered Business Solutions
                 </span>
                 <div className="w-12 h-0.5 bg-gradient-to-l from-transparent to-primary-300"></div>
               </div>
