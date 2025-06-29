@@ -51,7 +51,7 @@ const Footer = () => {
       label: "Client Satisfaction",
       color: "electric",
     },
-    { icon: Cpu, value: "2025", label: "Year Established", color: "accent" },
+    { icon: Cpu, value: "2020", label: "Year Established", color: "accent" },
     {
       icon: Globe,
       value: "Multiple",

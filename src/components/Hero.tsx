@@ -218,7 +218,7 @@ const Hero = () => {
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold ai-heading">2025</div>
+                  <div className="text-2xl font-bold ai-heading">2020</div>
                   <div className="text-sm text-gray-400 font-logo">
                     Year Established
                   </div>

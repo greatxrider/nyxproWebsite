@@ -104,7 +104,7 @@ const Team = () => {
     },
     {
       icon: Brain,
-      number: "2025",
+      number: "2020",
       label: "Year Established",
       color: "accent",
     },
@@ -222,7 +222,7 @@ const Team = () => {
             <span className="text-white">50+ Team Members</span>
             <br />
             <span className="text-white">as of </span>
-            <span style={{ color: "#5CE2E7" }}>2025</span>
+            <span style={{ color: "#5CE2E7" }}>2020</span>
             <span className="text-white"> — And We're</span>
             <br />
             <span className="gradient-text">Still Growing</span>

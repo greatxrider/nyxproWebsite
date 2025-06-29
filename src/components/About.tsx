@@ -65,28 +65,28 @@ const About = () => {
 
   const values = [
     {
-      icon: Brain,
-      title: "AI Innovation",
-      description:
-        "We harness cutting-edge artificial intelligence to create solutions that anticipate needs and optimize outcomes.",
-    },
-    {
       icon: Zap,
-      title: "Rapid Deployment",
+      title: "Automation Excellence",
       description:
-        "Our AI-accelerated development process ensures faster time-to-market while maintaining enterprise-grade quality.",
-    },
-    {
-      icon: Shield,
-      title: "Secure & Compliant",
-      description:
-        "Bank-level security protocols with AI-powered threat detection ensure your data and operations remain protected.",
+        "We specialize in transforming manual processes into intelligent automated workflows that save time and reduce errors across all industries.",
     },
     {
       icon: Target,
-      title: "Results-Driven",
+      title: "Business Partnership",
       description:
-        "Every AI solution is designed with measurable ROI and clear business impact in mind, delivering tangible value.",
+        "Your success is our success. We treat your business challenges as our own and deliver solutions that drive real growth and efficiency.",
+    },
+    {
+      icon: Rocket,
+      title: "Team Growth",
+      description:
+        "We're continuously expanding our team of skilled developers and specialists to deliver higher quality services and faster results.",
+    },
+    {
+      icon: Shield,
+      title: "Industry Expertise",
+      description:
+        "From healthcare billing to financial systems, we understand diverse industry requirements and compliance standards.",
     },
   ];
 
@@ -131,27 +131,38 @@ const About = () => {
 
   const aiTechnologies = [
     {
-      category: "Neural Intelligence",
-      technologies: ["TensorFlow", "PyTorch", "Keras", "Scikit-learn"],
-      icon: Brain,
+      category: "Automation Tools",
+      technologies: [
+        "n8n",
+        "Zapier",
+        "Make.com",
+        "UiPath",
+        "Automation Anywhere",
+      ],
+      icon: Zap,
       color: "primary",
     },
     {
-      category: "Development Platforms",
-      technologies: ["Python", "JavaScript", "Node.js", "React"],
+      category: "Development Stack",
+      technologies: ["Python", "JavaScript", "NextJS", "Django", "Flask"],
       icon: Code,
       color: "electric",
     },
     {
-      category: "Cloud Infrastructure",
-      technologies: ["AWS", "Google Cloud", "Azure", "Docker"],
+      category: "Cloud & Infrastructure",
+      technologies: ["Google Cloud", "Docker", "Node.js", "PostgreSQL"],
       icon: Globe,
       color: "accent",
     },
     {
-      category: "Data Analytics",
-      technologies: ["Pandas", "NumPy", "Apache Spark", "Tableau"],
-      icon: BarChart3,
+      category: "Industry Solutions",
+      technologies: [
+        "Medical Billing",
+        "Bookkeeping",
+        "Accounting",
+        "Data Science",
+      ],
+      icon: Target,
       color: "primary",
     },
   ];
@@ -241,25 +252,33 @@ const About = () => {
             <div className="space-y-6 text-gray-300 leading-relaxed font-logo">
               <p className="text-lg">
                 <strong className="text-primary-300 font-logo">
-                  At NYXPRO IT Consulting and Services,
+                  We exist to revolutionize how businesses operate
                 </strong>{" "}
-                we specialize in transforming traditional business operations
-                through artificial intelligence, machine learning, and
-                intelligent automation solutions that deliver measurable
-                results.
+                by applying cutting-edge AI and automation solutions to solve
+                real-world industry challenges. Our mission is simple: transform
+                complex business problems into streamlined, intelligent systems
+                that drive measurable growth and efficiency.
               </p>
               <p>
-                Our expertise spans across healthcare technology, financial
-                systems, data analytics, and custom software development. We
-                leverage advanced AI algorithms to optimize workflows, enhance
-                decision-making, and create scalable solutions that adapt to
-                your evolving business needs.
+                <strong className="text-electric-400 font-logo">
+                  Building Tomorrow's Workforce Today.
+                </strong>{" "}
+                We're actively growing our team of skilled developers, AI
+                specialists, and automation experts who share our passion for
+                innovation. Every team member we bring on board strengthens our
+                ability to deliver exceptional, high-quality services that
+                exceed client expectations.
               </p>
               <p>
-                From AI-powered medical billing systems to intelligent workflow
-                automation, we bridge the gap between cutting-edge technology
-                and practical business applications, ensuring every solution
-                delivers tangible value and competitive advantage.
+                From healthcare automation and financial systems to
+                manufacturing workflows and retail optimization — we partner
+                with businesses across diverse industries to implement AI
+                solutions that actually work.
+                <strong className="text-accent-400 font-logo">
+                  {" "}
+                  Your success fuels our growth, and our growing expertise
+                  accelerates your competitive advantage.
+                </strong>
               </p>
             </div>
 
@@ -269,19 +288,19 @@ const About = () => {
                 <div className="flex items-center space-x-3 mb-2">
                   <Cpu className="w-5 h-5 text-primary-300" />
                   <span className="text-2xl font-bold gradient-text font-logo">
-                    100+
+                    Growing
                   </span>
                 </div>
-                <p className="text-gray-300 text-sm">AI Models Deployed</p>
+                <p className="text-gray-300 text-sm">Developer Team</p>
               </div>
               <div className="ai-panel">
                 <div className="flex items-center space-x-3 mb-2">
                   <BarChart3 className="w-5 h-5 text-electric-400" />
                   <span className="text-2xl font-bold gradient-text font-logo">
-                    99.9%
+                    100+
                   </span>
                 </div>
-                <p className="text-gray-300 text-sm">System Uptime</p>
+                <p className="text-gray-300 text-sm">Projects Delivered</p>
               </div>
             </div>
           </div>
@@ -504,7 +523,7 @@ const About = () => {
         {/* Company Values */}
         <div className="mb-16">
           <h3 className="text-2xl lg:text-3xl font-bold text-center mb-12 text-white font-logo">
-            Our <span className="gradient-text">AI-Driven Values</span>
+            Our <span className="gradient-text">Core Values</span>
           </h3>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -536,7 +555,7 @@ const About = () => {
 
           <div className="relative z-10 text-center">
             <h3 className="text-2xl lg:text-3xl font-bold mb-8 gradient-text font-logo">
-              Our AI Technology Stack
+              Our Technology & Automation Stack
             </h3>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
