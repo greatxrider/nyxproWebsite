@@ -197,7 +197,13 @@ const Hero = () => {
                   </a>
                 )}
 
-                <button className="btn-secondary group font-logo text-lg px-8 py-4">
+                <button
+                  onClick={() => {
+                    const servicesSection = document.getElementById("services");
+                    servicesSection?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className="btn-secondary group font-logo text-lg px-8 py-4"
+                >
                   Explore AI Solutions
                   <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </button>
