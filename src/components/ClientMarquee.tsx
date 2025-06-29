@@ -27,9 +27,19 @@ const ClientMarquee = () => {
       alt: "Alliance Medical Partners - Medical Services",
     },
     {
+      name: "Built From Love LLC",
+      logo: "/clients/built-from-love-llc.svg",
+      alt: "Built From Love LLC - Community Healthcare Solutions",
+    },
+    {
       name: "Healthcare Solutions",
       logo: "/clients/305480157_496408075820242_715287000281272617_n.jpg",
       alt: "Healthcare Solutions Partner",
+    },
+    {
+      name: "Anonova LLC",
+      logo: "/clients/anonova-llc.svg",
+      alt: "Anonova LLC - Healthcare Technology Innovation",
     },
     {
       name: "Medical Practice Group",

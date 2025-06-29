@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   Users,
   Zap,
@@ -429,10 +430,13 @@ const Team = () => {
                     passion for AI innovation and business transformation. Join
                     our rapidly growing team of 50+ professionals.
                   </p>
-                  <button className="btn-primary group font-logo w-full">
+                  <Link
+                    href="/careers"
+                    className="btn-primary group font-logo w-full inline-flex items-center justify-center"
+                  >
                     Explore Career Opportunities
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  </Link>
                 </div>
 
                 {/* Enhanced Corner Accents */}

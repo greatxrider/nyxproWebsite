@@ -1,0 +1,61 @@
+<svg width="240" height="120" viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="anonovaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34495e;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="240" height="120" fill="#ffffff" rx="8"/>
+  
+  <!-- Geometric Logo Mark -->
+  <g transform="translate(20, 30)">
+    <!-- Outer ring -->
+    <circle cx="30" cy="30" r="25" fill="none" stroke="url(#anonovaGradient)" stroke-width="3" opacity="0.8"/>
+    
+    <!-- Inner elements -->
+    <polygon points="30,15 42,35 18,35" fill="url(#anonovaGradient)" opacity="0.7"/>
+    <circle cx="30" cy="40" r="6" fill="url(#anonovaGradient)" opacity="0.9"/>
+    
+    <!-- Tech circuit lines -->
+    <line x1="10" y1="30" x2="18" y2="30" stroke="url(#anonovaGradient)" stroke-width="2" opacity="0.6"/>
+    <line x1="42" y1="30" x2="50" y2="30" stroke="url(#anonovaGradient)" stroke-width="2" opacity="0.6"/>
+    <line x1="30" y1="10" x2="30" y2="18" stroke="url(#anonovaGradient)" stroke-width="2" opacity="0.6"/>
+    <line x1="30" y1="42" x2="30" y2="50" stroke="url(#anonovaGradient)" stroke-width="2" opacity="0.6"/>
+    
+    <!-- Corner nodes -->
+    <circle cx="10" cy="30" r="2" fill="url(#anonovaGradient)"/>
+    <circle cx="50" cy="30" r="2" fill="url(#anonovaGradient)"/>
+    <circle cx="30" cy="10" r="2" fill="url(#anonovaGradient)"/>
+    <circle cx="30" cy="50" r="2" fill="url(#anonovaGradient)"/>
+  </g>
+  
+  <!-- Company Name -->
+  <text x="85" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="url(#textGrad)">ANONOVA</text>
+  <text x="85" y="55" font-family="Arial, sans-serif" font-size="12" font-weight="normal" fill="#7f8c8d">LLC</text>
+  
+  <!-- Tagline -->
+  <text x="85" y="70" font-family="Arial, sans-serif" font-size="9" font-style="italic" fill="#95a5a6">Innovation Simplified</text>
+  
+  <!-- Tech decorative elements -->
+  <g opacity="0.4">
+    <rect x="200" y="25" width="8" height="2" fill="url(#anonovaGradient)" rx="1"/>
+    <rect x="210" y="28" width="6" height="2" fill="url(#anonovaGradient)" rx="1"/>
+    <rect x="205" y="31" width="10" height="2" fill="url(#anonovaGradient)" rx="1"/>
+    <circle cx="225" cy="27" r="1.5" fill="url(#anonovaGradient)"/>
+    <circle cx="220" cy="32" r="1" fill="url(#anonovaGradient)"/>
+  </g>
+</svg> 

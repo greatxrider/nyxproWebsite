@@ -26,6 +26,7 @@ const Footer = () => {
     { name: "Neural Automation", href: "#services" },
     { name: "AI Solutions", href: "#services" },
     { name: "Our Team", href: "#team" },
+    { name: "Careers", href: "/careers" },
     { name: "Connect", href: "#connect" },
   ];
 

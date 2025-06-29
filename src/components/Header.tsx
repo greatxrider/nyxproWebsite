@@ -72,6 +72,13 @@ const Header = () => {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-300 to-electric-400 group-hover:w-full transition-all duration-300"></span>
             </Link>
             <Link
+              href="/careers"
+              className="text-gray-300 hover:text-primary-300 transition-all duration-300 font-medium relative group font-logo"
+            >
+              Careers
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-300 to-electric-400 group-hover:w-full transition-all duration-300"></span>
+            </Link>
+            <Link
               href="#connect"
               className="text-gray-300 hover:text-primary-300 transition-all duration-300 font-medium relative group font-logo"
             >
@@ -145,6 +152,13 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Our Team
+              </Link>
+              <Link
+                href="/careers"
+                className="text-gray-300 hover:text-primary-300 transition-all duration-300 py-2 px-4 rounded-lg hover:bg-gray-800/30 font-logo"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Careers
               </Link>
               <Link
                 href="#connect"
