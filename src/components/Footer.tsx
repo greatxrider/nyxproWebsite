@@ -310,24 +310,6 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-
-            {/* Live Status */}
-            <div className="p-4 bg-gradient-to-r from-primary-300/10 to-electric-400/10 rounded-lg border border-primary-300/30">
-              <div className="flex items-center justify-between mb-2">
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-primary-300 rounded-full animate-pulse"></div>
-                  <span className="text-white text-sm font-semibold font-logo">
-                    AI Systems Online
-                  </span>
-                </div>
-                <span className="text-primary-300 text-xs font-logo">
-                  Real-time
-                </span>
-              </div>
-              <p className="text-gray-400 text-xs font-logo">
-                All neural networks operational
-              </p>
-            </div>
           </div>
         </div>
 

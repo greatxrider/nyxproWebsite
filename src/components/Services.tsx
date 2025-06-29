@@ -20,6 +20,9 @@ import {
   Network,
   Activity,
   BarChart3,
+  FileText,
+  Building,
+  CreditCard,
 } from "lucide-react";
 
 const Services = () => {
@@ -38,135 +41,137 @@ const Services = () => {
 
   const services = [
     {
-      icon: Brain,
-      title: "AI Automation",
-      shortDescription: "Intelligent process automation",
+      icon: Zap,
+      title: "AI Automation & Integration",
+      shortDescription: "Process automation solutions",
       description:
-        "Revolutionary AI-driven automation solutions that transform manual workflows into intelligent, self-optimizing systems using advanced machine learning algorithms.",
+        "We help businesses automate repetitive tasks and integrate systems to improve efficiency. Our team specializes in connecting different business tools and creating automated workflows that save time and reduce errors.",
       features: [
-        "Neural Process Optimization",
-        "Machine Learning Integration",
-        "Predictive Decision Making",
-        "Real-time Analytics Dashboard",
-        "Automated Quality Control",
-        "Smart Resource Allocation",
+        "Business Process Automation",
+        "System Integration",
+        "Workflow Design",
+        "Custom Automation Solutions",
+        "API Integrations",
+        "Process Optimization",
       ],
       benefits:
-        "Reduce operational costs by up to 70% while increasing productivity and accuracy",
-      color: "primary",
-      connections: [1, 4],
-    },
-    {
-      icon: Stethoscope,
-      title: "Healthcare AI Billing",
-      shortDescription: "AI-enhanced medical billing",
-      description:
-        "Cutting-edge AI-powered medical billing platform with intelligent claim processing, fraud detection, and automated compliance management for healthcare providers.",
-      features: [
-        "AI Claims Processing",
-        "Automated Insurance Verification",
-        "Intelligent Revenue Optimization",
-        "Compliance Monitoring System",
-        "Predictive Denial Management",
-        "Real-time Payment Tracking",
-      ],
-      benefits:
-        "Improve billing accuracy by 95% and reduce processing time by 60%",
-      color: "electric",
-      connections: [2, 3],
-    },
-    {
-      icon: Database,
-      title: "Intelligent Data Management",
-      shortDescription: "AI-powered data processing",
-      description:
-        "Advanced data management ecosystem powered by AI validation, smart categorization, and intelligent quality control systems ensuring 99.9% accuracy.",
-      features: [
-        "AI-Powered Data Validation",
-        "Smart Pattern Recognition",
-        "Automated Quality Assurance",
-        "Intelligent Data Categorization",
-        "Secure Cloud Processing",
-        "Real-time Error Detection",
-      ],
-      benefits: "Achieve 99.9% accuracy with 5x faster processing speeds",
-      color: "accent",
-      connections: [1, 4, 5],
-    },
-    {
-      icon: Calculator,
-      title: "AI Financial Analytics",
-      shortDescription: "Intelligent financial management",
-      description:
-        "Comprehensive AI-driven financial management platform with predictive analytics, automated reconciliation, and intelligent forecasting capabilities.",
-      features: [
-        "Predictive Financial Modeling",
-        "Automated Reconciliation",
-        "AI Tax Optimization",
-        "Smart Cash Flow Analysis",
-        "Intelligent Risk Assessment",
-        "Real-time Financial Insights",
-      ],
-      benefits:
-        "Real-time financial intelligence with 40% improved forecasting accuracy",
+        "Streamline your operations and reduce manual work with reliable automation",
       color: "primary",
       connections: [1, 2],
     },
     {
-      icon: Workflow,
-      title: "Neural Workflow Engine",
-      shortDescription: "AI workflow orchestration",
-      description:
-        "Next-generation workflow automation platform that learns, adapts, and optimizes business processes using neural network technologies.",
-      features: [
-        "Self-Learning Workflows",
-        "Adaptive Process Optimization",
-        "Intelligent Integration Hub",
-        "Predictive Performance Monitoring",
-        "Smart Resource Management",
-        "Automated Bottleneck Resolution",
-      ],
-      benefits:
-        "Streamline operations with 80% reduction in manual intervention",
-      color: "electric",
-      connections: [0, 2, 6],
-    },
-    {
       icon: Globe,
-      title: "AI-Driven Web Platforms",
-      shortDescription: "Intelligent web solutions",
+      title: "Web & Software Development",
+      shortDescription: "Custom development solutions",
       description:
-        "Revolutionary web applications infused with AI capabilities, featuring adaptive user experiences, intelligent content optimization, and predictive performance enhancement.",
+        "We build websites, web applications, and custom software solutions tailored to your business needs. Our development team creates user-friendly, functional solutions that help your business grow.",
       features: [
-        "Adaptive User Interfaces",
-        "AI Content Optimization",
-        "Predictive Performance Scaling",
-        "Intelligent SEO Enhancement",
-        "Smart User Analytics",
-        "Automated A/B Testing",
-      ],
-      benefits: "Enhanced user engagement with 50% improved conversion rates",
-      color: "accent",
-      connections: [2, 4, 6],
-    },
-    {
-      icon: Code,
-      title: "AI Software Architecture",
-      shortDescription: "Intelligent software solutions",
-      description:
-        "Enterprise-grade software solutions built with embedded AI intelligence, featuring self-healing code, predictive maintenance, and adaptive functionality.",
-      features: [
-        "Self-Healing Code Architecture",
-        "Predictive System Maintenance",
-        "AI-Enhanced Security",
-        "Intelligent Performance Optimization",
-        "Adaptive Feature Evolution",
-        "Smart Documentation Generation",
+        "Website Development",
+        "Web Applications",
+        "Custom Software Solutions",
+        "E-commerce Platforms",
+        "Database Management",
+        "Mobile-Responsive Design",
       ],
       benefits:
-        "Enterprise resilience with 99.9% uptime and predictive issue resolution",
+        "Professional websites and software that represent your business well",
+      color: "electric",
+      connections: [0, 2],
+    },
+    {
+      icon: Database,
+      title: "Data Analysis & Management",
+      shortDescription: "Business data solutions",
+      description:
+        "We help organize, analyze, and manage your business data effectively. Our team provides data entry services, creates reports, and helps you understand your business metrics to make better decisions.",
+      features: [
+        "Data Entry Services",
+        "Data Analysis & Reporting",
+        "Database Setup & Management",
+        "Business Intelligence Reports",
+        "Data Cleaning & Organization",
+        "Performance Dashboards",
+      ],
+      benefits:
+        "Better understand your business with organized data and clear reports",
+      color: "accent",
+      connections: [0, 1, 3],
+    },
+    {
+      icon: Stethoscope,
+      title: "Medical Billing & Payment Services",
+      shortDescription: "Healthcare billing solutions",
+      description:
+        "We provide medical billing, data entry, and payment posting services for healthcare providers. Our experienced team ensures accurate billing and timely payment processing.",
+      features: [
+        "Medical Billing Services",
+        "Insurance Claims Processing",
+        "Payment Posting",
+        "Medical Data Entry",
+        "Claims Follow-up",
+        "Billing Report Generation",
+      ],
+      benefits:
+        "Accurate medical billing and faster payment processing for healthcare providers",
       color: "primary",
-      connections: [4, 5],
+      connections: [2, 4],
+    },
+    {
+      icon: Calculator,
+      title: "Accounting & Financial Services",
+      shortDescription: "Complete financial management",
+      description:
+        "We offer comprehensive accounting and bookkeeping services including financial management, tax filing, and record-keeping to help businesses maintain accurate financial records.",
+      features: [
+        "Bookkeeping Services",
+        "Financial Record Management",
+        "Tax Filing Assistance",
+        "Payroll Management",
+        "Financial Reporting",
+        "Budget Planning Support",
+      ],
+      benefits:
+        "Professional financial management with accurate records and tax compliance",
+      color: "electric",
+      connections: [3, 5],
+    },
+    {
+      icon: Building,
+      title: "Business Registration & Compliance",
+      shortDescription: "Government registration services",
+      description:
+        "We assist with business registration, permits, and government compliance requirements. Our team handles the paperwork and processes for business setup, registration, and closure.",
+      features: [
+        "Business Name Registration",
+        "BIR Registration Services",
+        "Business Permit Processing",
+        "SSS, PhilHealth, Pag-IBIG Registration",
+        "DOLE Registration",
+        "Business Closure Assistance",
+      ],
+      benefits:
+        "Hassle-free business registration and compliance with government requirements",
+      color: "accent",
+      connections: [4],
+    },
+    {
+      icon: FileText,
+      title: "Land Title & Documentation Services",
+      shortDescription: "Property documentation assistance",
+      description:
+        "We provide assistance with land title transfers, tax declarations, and property-related documentation. Our team helps navigate the requirements for property transactions and documentation.",
+      features: [
+        "Land Title Transfer Services",
+        "Land Tax Declaration",
+        "Property Titling Assistance",
+        "Document Preparation",
+        "Government Office Coordination",
+        "Property Documentation Review",
+      ],
+      benefits:
+        "Professional assistance with property documentation and title transfers",
+      color: "primary",
+      connections: [5],
     },
   ];
 
@@ -294,19 +299,20 @@ const Services = () => {
             <div className="w-16 h-0.5 bg-gradient-to-r from-transparent to-primary-300 animate-data-flow"></div>
             <span className="text-sm font-medium tracking-wide px-6 py-3 bg-primary-300/10 rounded-full border border-primary-300/30 font-logo backdrop-blur-sm">
               <Cpu className="inline w-4 h-4 mr-2 animate-neural-pulse" />
-              Our Core AI Services
+              Our Business Solutions
             </span>
             <div className="w-16 h-0.5 bg-gradient-to-l from-transparent to-primary-300 animate-data-flow"></div>
           </div>
 
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 ai-heading">
-            Intelligent Technology Solutions
+            Complete Business Solutions
           </h2>
 
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-logo">
-            We deliver business solutions with AI-powered expertise, treating
-            your challenges as our own. Our dedicated approach ensures results
-            that drive your success forward.
+            From automation and development to accounting and government
+            registration, we provide comprehensive business services that help
+            you focus on what matters most. Our experienced team treats your
+            business challenges as our own.
           </p>
         </div>
 
@@ -399,7 +405,7 @@ const Services = () => {
 
                     {/* Interactive CTA */}
                     <button className="flex items-center space-x-2 text-primary-300 hover:text-white font-medium group/cta transition-all duration-300 font-logo">
-                      <span>Explore Technology</span>
+                      <span>Learn More</span>
                       <div className="relative">
                         <ChevronRight className="w-4 h-4 group-hover/cta:translate-x-1 transition-transform duration-300" />
                         <div className="absolute inset-0 bg-primary-300 rounded-full opacity-0 group-hover/cta:opacity-20 group-hover/cta:animate-ping transition-opacity duration-300"></div>
@@ -525,10 +531,15 @@ const Services = () => {
                 </div>
               </div>
 
-              <button className="btn-primary w-full lg:w-auto group font-logo text-lg px-8 py-4">
-                Initialize AI Partnership
+              <a
+                href="https://calendly.com/jephmari-nyxpro/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary w-full lg:w-auto group font-logo text-lg px-8 py-4 inline-flex items-center justify-center"
+              >
+                Schedule Consultation
                 <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -613,29 +624,31 @@ const Services = () => {
                   <div className="p-6 bg-electric-400/10 rounded-2xl border border-electric-400/30">
                     <h4 className="font-semibold text-electric-400 mb-3 font-logo flex items-center">
                       <Activity className="w-5 h-5 mr-2" />
-                      Implementation Timeline
+                      Project Timeline
                     </h4>
                     <p className="text-gray-300 font-logo">
-                      Rapid deployment in 2-4 weeks with continuous AI
-                      optimization
+                      Typical project completion in 2-6 weeks depending on scope
+                      and requirements
                     </p>
                   </div>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button
-                  className="btn-primary flex-1 group font-logo"
-                  onClick={() => setSelectedService(null)}
+                <a
+                  href="https://calendly.com/jephmari-nyxpro/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary flex-1 group font-logo inline-flex items-center justify-center"
                 >
-                  Initialize This Solution
+                  Get Started
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </button>
+                </a>
                 <button
                   className="btn-secondary flex-1 font-logo"
                   onClick={() => setSelectedService(null)}
                 >
-                  Schedule AI Consultation
+                  Close Details
                 </button>
               </div>
             </div>

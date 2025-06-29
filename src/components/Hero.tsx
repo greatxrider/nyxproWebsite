@@ -301,7 +301,7 @@ const Hero = () => {
                 <div className="flex items-center space-x-2 px-4 py-2 bg-black/80 backdrop-blur-sm rounded-full border border-electric-400/30">
                   <div className="w-2 h-2 bg-electric-400 rounded-full animate-pulse"></div>
                   <span className="text-xs text-electric-400 font-logo">
-                    AI Systems Online
+                    Solutions Ready
                   </span>
                 </div>
               </div>
